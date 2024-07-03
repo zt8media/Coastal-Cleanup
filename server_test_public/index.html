@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="page-hider">
+            <form id="signUp-form" class="hide">
+                <label for="username">username</label>
+                <input type="text" id="username" name="username">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">submit</button>
+                <button id="login">login</button>
+            </form>
+            <form id="login-form" class="hide">
+                <label for="username">username</label>
+                <input type="text" id="username" name="username">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">submit</button>
+                <button id="signUp">sign up</button>
+            </form>
+        </div>
+
+        <div id="budget-container">
+
+        <div id="top-container">
+            <h1>Budget</h1>
+        </div>
+        <div id="middle-container">
+           <!-- Main Tracking Amounts go Here -->
+        </div>
+        <div id="bottom-container">
+            <div id="left-container">
+                <div id="explorer">
+                    <div id="top-explorer">
+                        <p>Explorer</p>
+                        <span>
+                            <label for="search_bar">Search</label>
+                            <input id="search_bar" type="text">
+                            <button id="add_button" class="add">+</button>
+                        </span>
+                    </div>
+                    <div id="bottom-explorer">
+                        <!-- Explorer Main folders go here -->
+                    </div>
+                </div>
+            </div>
+            <div id="right-container">
+                <span>
+                    <label for="budget_type">Type:</label>
+                    <select id="budget_type" name="budget" disabled>
+                    </select>
+                </span>
+                <span>
+                    <p id="inform" class="hide">please fill in all fields</p>
+                </span>
+                <span>
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" class="field">
+                </span>
+                <span>
+                    <label for="amount">Amount:</label>
+                    <input id="amount" type="number" class="field">
+                </span>
+                <span>
+                    <label for="description">Description:</label>
+                    <input id="description" type="text" class="field">
+                </span>
+                <span>
+                    <button id="enter_button">Enter</button>
+                </span>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/a609b8e94a.js" crossorigin="anonymous"></script>
+</body>
+</html>
