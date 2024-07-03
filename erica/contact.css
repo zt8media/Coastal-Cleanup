@@ -1,0 +1,86 @@
+.contact-us-container img {
+    
+}
+
+.container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    padding: 10px 10px;
+    margin: 30px auto;
+    width: 500px;
+}
+
+.form{
+    background-color: white;
+    color: white;
+    padding: 20px 20px;
+}
+
+.formc{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.formc label{
+    color: black;
+    display: block;
+}
+
+.formc input{
+    display: block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+}
+
+
+.formc select{
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+
+.formc.error input{
+    border: 2px solid red;
+}
+
+.formc.error input{
+    border-color: red;
+}
+
+.formc small{
+    color: red;
+    position: absolute;
+    visibility: hidden;
+}
+
+.formc select{
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+}
+
+button{
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
