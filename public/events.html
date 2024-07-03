@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Calendar</title>
+    <link rel="stylesheet" href="https://unpkg.com/fullcalendar@5.10.1/main.min.css" />
+    <link rel="stylesheet" href="/events.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhpISrGkZJeKil5cxmwbPMr4NcGAZWaxE&libraries=places"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    
+    
+    
+    
+</head>
+<body>
+    <h1 id="event-header">Events Calendar</h1>
+    <div class="container">
+        <div id='calendar'></div>
+        <div id='event-form-container'>
+            <h2 id="submit-event">Submit Event</h2>
+            <form id="eventForm">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="start">Start Date:</label>
+                <input type="datetime-local" id="start" name="start" required>
+                <label for="end">End Date:</label>
+                <input type="datetime-local" id="end" name="end" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter address or coordinates" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="map"></div>
+        </div>
+    </div>
+   
+   
+   
+   
+   
+    <script src="https://unpkg.com/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="/scriptevent.js"></script>
+</body>
+</html>
