@@ -162,6 +162,11 @@ video {
 }
 
 /* card slider css*/
+#title {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .list {
   display: flex;
   padding: 10px;
