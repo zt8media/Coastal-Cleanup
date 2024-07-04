@@ -9,6 +9,18 @@ body {
 .contact-text-body {
     font-family: "Bungee", sans-serif;
 }
+
+.form-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+.contact-info-font {
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-phone {
+    text-decoration: underline;
+}
   .contact-hero {
     display: flex;
     flex-direction: column;
@@ -126,7 +138,6 @@ body {
 
 
 button {
-    font-size: 15px; 
     width: 100%;
     height: 40px;
     border: 0; 
@@ -177,8 +188,40 @@ button:hover span {
     text-decoration: none;
 }
 
-.direction-bttn {
+.direction-bttn{
     width: 150px;
+
+}
+
+.direction-bttn a {
+    width: 100%;
+    height: 40px;
+    border: 0; 
+    border-radius: 8px;
+    background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+    color: #FFFFFF;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    transition: all .3s;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+.direction-bttn:hover a {
+    background-color: white;
+    color: black;
+    outline: 0;
 }
 
 .split-container {
@@ -186,6 +229,49 @@ button:hover span {
     flex-direction: row-reverse;
     justify-content: space-evenly;
 }
+
+/* For tablets (portrait and landscape) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Your tablet-specific styles go here */
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .banner {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .formc input {
+        width: 95%;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .split-container {
+        flex-direction: column;
+    }
+
+    .office-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .office {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact-text-body {
+        justify-content: center;
+    }
+}
+ 
 
 
  

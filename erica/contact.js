@@ -54,11 +54,11 @@ form.addEventListener("submit", function(e) {
         removeErrorMsg(lastName);
         pass = false;
     }
-    if (emailAddress.value === "" || !/^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/.test(emailAddress.value) >= 255) {
-        errorMsg(emailAddress, "Email is required");
+    if (email.value === "" || !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+        errorMsg(email, "Invalid email address");
+        pass = false;
     } else {
         removeErrorMsg(email);
-        pass = false;
     }
     if (subject.value === "" || subject.value.length >= 50) {
         errorMsg(subject, "Subject is required");
