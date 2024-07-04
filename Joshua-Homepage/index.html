@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="navbar-styles/navbar.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li></li>
+                <li>Events</li>
+                <li></li>
+                <li>Learn More</li>
+                <li></li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <figure class="wrapper">
+            <!-- Video slideshow goes here --> <video autoplay loop muted>
+                <!-- <source src="" type="video/mp4"/> -->
+            </video>
+        </figure>
+
+
+        <h1 id="coastal-cleanup">Coastal Cleanup</h1>
+
+        
+        <section class="learn-more">
+            <h1>Who are we?</h1>
+            <p>We are a non profit organization that strives to keep the planet the way that we found it. We do this by hosting weekly coastal cleanups, picking up debris and waste that either gets left behind by tourists or washes onto shore. By doing this, we reduce litter and protect our oceans.</p>
+            <button>Learn More</button>
+        </section>
+
+
+        <h1>Our Mission</h1>
+        <p> Our planet is made of 97% water, yet 40% is severly polluted. Now since we're a nonprofit, <!-- go on to say that we're a small company looking to expand globally to help out with the pollution crisis--> </p>
+
+
+        <figure class="company-photos">
+            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-kirill-ozerov-109766512-9620528.jpg">
+            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-ron-lach-9034659.jpg">
+            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-ron-lach-9037204.jpg">
+        </figure>
+
+
+        <div id="title">
+            <h2>Meet our Staff</h2>
+        </div>
+        <div class="list-wrapper">
+            <ul class="list">
+             <li class="item">
+              <div class="content">
+               <img src="/Joshua-Homepage/headshots/zariyah_tate_headshot_1__720.jpg" alt="staff-picture" class="headshot">
+               <div class="profile-details">
+                  <h3 class="name">Zariyah Tate</h3>
+                  <p class="job">Coding Apprentice</p>
+               </div>
+              </div>
+             </li>
+              <li class="item">
+              <div class="content">
+               <img src="/Joshua-Homepage/headshots/sera_senwosret-ward_headshot_1__720.jpg" alt="staff-picture" class="headshot">
+               <div class="profile-details">
+                  <h3 class="name">Sera Ward</h3>
+                  <p class="job">Coding Apprentice</p>
+               </div>
+              </div>
+             </li>
+             <li class="item">
+              <div class="content">
+               <img src="/Joshua-Homepage/headshots/juan_casilla_headshot_1___1__720.jpg" alt="staff-picture" class="headshot">
+               <div class="profile-details">
+                  <h3 class="name">Juan Casilla</h3>
+                  <p class="job">Coding Apprentice</p>
+               </div>
+              </div>
+             </li>
+             <li class="item">
+              <div class="content">
+               <img src="/Joshua-Homepage/headshots/erica_moua_headshot_720.jpg" alt="staff-picture" class="headshot">
+               <div class="profile-details">
+                  <h3 class="name">Erica Moua</h3>
+                  <p class="job">Coding Apprentice</p>
+               </div>
+              </div>
+             </li>
+             <li class="item">
+              <div class="content">
+               <img src="/Joshua-Homepage/headshots/joshua_brito-infante_headshot_1__720.jpg" alt="staff-picture" class="headshot">
+               <div class="profile-details">
+                 <h3 class="name">Joshua Brito-Infante</h3>
+                 <p class="job">Coding Apprentice</p>
+               </div>
+              </div>
+             </li>
+            </ul>
+            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
+              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+            </button>
+            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
+              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
+            </button>
+        </div>
+
+    </main>
+    
+
+    <footer>
+        <nav>
+            <div></div>
+
+            <ul>
+                <li>Home</li>
+                <li></li>
+                <li>Events</li>
+                <li></li>
+                <li>Learn More</li>
+                <li></li>
+                <li>Contact Us</li>
+            </ul>
+
+            <div></div>
+
+            <div class=“social-media”>
+                <a href=“tiktok.com”><i class=“fa-brands fa-tiktok fa-xl”id=“footer-icons”  style=color:#000000;></i></a>
+                <a href=“instagram.com”><i class=“fa-brands fa-instagram fa-xl” id=“footer-icons” style=color:#000000;></i></a>
+                <a href=“facebook.com”><i class=“fa-brands fa-facebook fa-xl” id=“footer-icons” style=color:#000000;></i></a>
+            </div>
+        </nav>
+    </footer>
+
+    <script>
+        const list = document.querySelector(".list");
+//creating a function that based on the starting width of the arrow icon it will either scroll smoothly to the left or the right
+function handleClick(direction) {
+ // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+ const item = document.querySelector(".item");
+ const itemWidth = item.offsetWidth;
+ // Based on the direction we call `scrollBy` with the item width we got earlier
+direction === "previous" ?   list.scrollBy({ left: -itemWidth, behavior: "smooth" }) :   list.scrollBy({ left: itemWidth, behavior: "smooth" });
+}
+    </script>
+    <!-- <script src="script.js"></script> -->
+    
+</body>
+</html>
