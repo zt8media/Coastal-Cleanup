@@ -51,6 +51,17 @@ $background: #EEEDE7;
     justify-content: space-around;
 }
 
+@mixin flexSection {
+    display: flex;
+    flex-direction: row;
+    margin: 10% 0;
+}
+
+@mixin imageSize {
+    width: 80%;
+    height: 100%;
+}
+
 @mixin buttonStyle {
     padding: 20px;
             font-size: 16px;
@@ -110,11 +121,9 @@ main {
     // }
 
     .who-are-we {
-        display: flex;
-        flex-direction: row;
-        margin: 10% 0;
+        @include flexSection();
 
-        .learn-more {
+        .who-section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -134,18 +143,37 @@ main {
     } 
     
         img {
-            width: 80%;
-            height: 100%;
+            @include imageSize();
+            
         }
     }
 
+.our-mission {
+    @include flexSection();
 
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        // justify-content: flex-start;
+        margin: 5% 15%;
+    }
+
+    #mission-paragraph {
+        text-align: right;
+        margin: 2% 0;
+    }
+
+    img {
+        @include imageSize();
+        margin-left: 20%;
+    }
+}
 
 
 
     p {
         @include roboto-light();
-        text-align: center;
         color: $paragraph;
         font-size: 25px;
     }
@@ -176,6 +204,7 @@ main {
       }
     }
 
+    
     // below are the company photo stylings
 .company-photos {
     @include navFlexCenter();
