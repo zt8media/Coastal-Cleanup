@@ -51,6 +51,14 @@ $background: #EEEDE7;
     justify-content: space-around;
 }
 
+@mixin buttonStyle {
+    padding: 20px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: none;
+            background-color: $button;
+}
+
 
 
 
@@ -59,7 +67,14 @@ header {
     
 nav {
     @include navFlexCenter();
-    padding: 2% 5%;
+    padding: 2% 5%;       
+    
+    #logo {
+            width: 200px;
+            height: 200px;
+            // position: absolute;
+        }
+
     ul {
         @include navFlexCenter();
         @include roboto-light();
@@ -69,6 +84,10 @@ nav {
         li {
             padding-left: 20px;
         }
+    }
+
+    button {
+        @include buttonStyle();
     }
 }
 }
@@ -82,28 +101,45 @@ main {
         font-size: 67px;
     }
 
-    #coastal-cleanup {
-        color: $header;
-        font-size: 109px;
-        transform: translate(0, -450%);
-        background-color: white;
-        margin: 0 10%;
-    }
+    // #coastal-cleanup {
+    //     color: $header;
+    //     font-size: 109px;
+    //     transform: translate(0, -450%);
+    //     background-color: white;
+    //     margin: 0 10%;
+    // }
 
-    .learn-more {
+    .who-are-we {
+        display: flex;
+        flex-direction: row;
+        margin: 10% 0;
+
+        .learn-more {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        // justify-content: flex-start;
+        margin: 5% 15%;
+
+        #who-paragraph {
+            text-align: left;
+            margin: 2% 0;
+        }
+       
 
         button {
-            padding: 20px;
-            font-size: 16px;
-            border-radius: 30px;
-            border: none;
-            background-color: $button;
+            @include buttonStyle();
+            margin: 3% 0;
+        }
+    } 
+    
+        img {
+            width: 80%;
+            height: 100%;
         }
     }
+
+
 
 
 
