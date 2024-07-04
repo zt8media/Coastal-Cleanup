@@ -1,3 +1,5 @@
+
+//Google Mpas Api interation 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     var map;
@@ -48,16 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         map.setCenter(location);
     }
-
+//Full calender integration
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         headerToolbar: {
-            right: 'prev,next',
+            right: 'prev,next,today',
             center: 'title',
             left: 'dayGridMonth,dayGridWeek', // user can switch between the two
           },
         editable: true,
-        selectable: true,
+        selectable: false,
         events: '/events', // Fetch events from server
         select: function(info) {
             var title = prompt('Enter Event Title:');
@@ -204,3 +206,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/// Nav bar responsiveness
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open'); // Toggle the side menu
+    });
+});
