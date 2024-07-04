@@ -1,34 +1,90 @@
-.contact-us-container img {
-    
+body {
+    background-color: #EEEDE7;
+}
+.contact-text {
+    font-size: 3em;
+    font-family: "Bungee", sans-serif;
 }
 
-.container{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-    padding: 10px 10px;
-    margin: 30px auto;
+.contact-text-body {
+    font-family: "Bungee", sans-serif;
+}
+  .contact-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .contact-us {
+    position: relative;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    overflow: hidden; 
+}
+
+.contact-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./palmtree.png');
+    background-size: cover;
+    opacity: 0.7; 
+    z-index: -1;
+}
+
+.banner {
     width: 500px;
+    position: relative;
+    bottom: 60px;
+    background-color: #EEEDE7;
+    padding: 20px 20px 0px;
+    border-radius: 10px;
 }
 
-.form{
-    background-color: white;
-    color: white;
-    padding: 20px 20px;
+.email-link {
+    color: inherit; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+    transition: color 0.3s, text-decoration 0.3s;
 }
 
-.formc{
+.email-link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #EEEDE7;
+    padding: 10px 10px;
+     width: 500px;
+}
+
+.formc {
     margin-bottom: 10px;
     padding-bottom: 10px;
     position: relative;
+    margin-bottom: 30px;
 }
 
-.formc label{
+.formc label {
     color: black;
     display: block;
+    padding: 10px;
 }
 
-.formc input{
+.formc input {
     display: block;
     border: 1px solid gray;
     border-radius: 10px;
@@ -49,16 +105,15 @@
 
 .formc.error input{
     border: 2px solid red;
-}
-
-.formc.error input{
     border-color: red;
+    visibility: visible;
 }
 
-.formc small{
+.formc p {
     color: red;
     position: absolute;
     visibility: hidden;
+    margin-top: 2px;
 }
 
 .formc select{
@@ -69,18 +124,68 @@
     padding: 8px;
 }
 
-button{
-    font-size: 16px;
+
+button {
+    font-size: 15px; 
     width: 100%;
     height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
+    border: 0; 
+    border-radius: 8px;
+    background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+    color: #FFFFFF;
     cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    transition: all .3s;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 
-button:hover{
+button:hover {
     background-color: white;
     color: black;
+    outline: 0;
 }
+
+button:active {
+    transform: scale(0.9);
+}
+
+button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    text-decoration: none;
+}
+
+button:hover span {
+    background: none;
+    text-decoration: none;
+}
+
+.direction-bttn {
+    width: 150px;
+}
+
+.split-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+
+ 
