@@ -11,85 +11,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+    </script>
+
 </head>
 <body>
-    <div class="contact-us-container">
-        <img class="palmtree" src="./palmtree.jpg" alt="palmtree">
-    </div>
-    <div class="contact-info">
-        <p>If you're unable to locate the information you need, don't hesitate to reach out via our contact form. For inquiries related to press, kindly email us at press@theoceancleanup.com</p>
-    </div>
+    <section class="contact-hero">
+        <div class="contact-us">
+            <h1 class="contact-text">Contact Us!</h1>
+        </div>
+        <div class="banner">
+            <p class="banner-text">If you're unable to locate the information you need, don't hesitate to reach out via our contact form. For press inquiries, kindly email us at <a href="mailto:Admin@CoastalCleanUp.org" class="email-link">Admin@CoastalCleanUp.org</a> or <a href="/Juan/Html/learnmore.html">learn more</a>.</p>
+        </div>
+    </section>
     <div class ="split-container">
             <div class="container">
                 <form id="form" class="form">
-                    <h1>Get in touch!</h1>
+                    <h1 class="contact-text-body">Get In Touch</h1>
                     <div class="error">
                         <div class="formc">
-                            <label for="firstName">First Name</label>
+                            <label class="form-font" for="firstName">First Name</label>
                             <input type="text" id="firstName" placeholder="Enter your first name" autocomplete="off">
-                            <small>First name is required</small>
+                            <p></p>
                         </div>
                         
                         <div class="formc">
-                            <label for="lastName">Last Name</label>
+                            <label class="form-font" for="lastName">Last Name</label>
                             <input type="text" id="lastName" placeholder="Enter your last name" autocomplete="off">
-                            <small>Last name is required</small>
+                            <p></p>
                         </div>  
                         <div class="formc">
-                            <label for="emailAddress">Email Address</label>
-                            <input type="email" id="emailAddress" placeholder="Enter your email" autocomplete="off">
-                            <small>Email is required</small>
-                        </div>
-                                         
+                            <label class="form-font" for="emailAddress">Email Address</label>
+                            <input type="text" id="emailAddress" placeholder="Enter your email" autocomplete="off">
+                            <p></p>
+                        </div>  
                         <div class="formc">
-                            <label for="subject">Subject</label>
+                            <label class="form-font" for="subject">Subject</label>
                             <input type="text" id="subject" placeholder="Enter your subject" autocomplete="off">
-                            <small>Phone number is required</small>
+                            <p></p>
                         </div>
                         <div class="formc">
-                            <label for="message">Message</label>
+                            <label class="form-font" for="message">Message</label>
                             <input type="text" id="message" placeholder="Message" autocomplete="off">
+                            <p></p>
                         </div>  
-                    <button type="submit">Submit</button>
+                    <button class="button" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
             
         <div class="office-container">
-        <h2>Our Offices</h2>
+        <h2 class="contact-text-body">Our Offices</h2>
         
             <div class="office">
-                <h2 class="office-titles">Headquarters & Central</h2>
-                <p>Phone: 252-393-8185</p>
-                <p>Address: 3609 N.C. 24 (Ocean)<br>Newport, NC 28570</p>
-                <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation/@34.72038,-76.959572,16z/data=!4m6!3m5!1s0x89a8ee4d488e55f5:0xc0712dc16a428e37!8m2!3d34.7180844!4d-76.9633626!16s%2Fg%2F1hc4zx1nr?hl=en&entry=ttu">
-                    <button type="button">Get Direction</button>
-                </a>
+                <h2 class="contact-text-body">Headquarters & Central</h2>
+                <p class="contact-phone">Phone: 252-393-8185</p>
+                <p class="contact-info-font">Address: 3609 N.C. 24 (Ocean)<br>Newport, NC 28570</p>
+                <button  class="direction-bttn" type="button">
+                    <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation/@34.72038,-76.959572,16z/data=!4m6!3m5!1s0x89a8ee4d488e55f5:0xc0712dc16a428e37!8m2!3d34.7180844!4d-76.9633626!16s%2Fg%2F1hc4zx1nr?hl=en&entry=ttu">
+                        Get Direction
+                    </a>
+                </button>
                   
             </div>
             
             <div class="office">
-                <h2>Northeast</h2>
-                <p>Phone: 252-473-1607</p>
-                <p>Address: 637 Harbor Rd<br>P.O. Box 276<br>Wanchese, NC 27981</p>
-                <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation/@34.72038,-76.959572,16z/data=!4m6!3m5!1s0x89a8ee4d488e55f5:0xc0712dc16a428e37!8m2!3d34.7180844!4d-76.9633626!16s%2Fg%2F1hc4zx1nr?hl=en&entry=ttu">
-                    <button type="button">Get Direction</button>
-                </a>
+                <h2 class="contact-text-body">Northeast</h2>
+                <p class="contact-phone">Phone: 252-473-1607</p>
+                <p class="contact-info-font">Address: 637 Harbor Rd<br>P.O. Box 276<br>Wanchese, NC 27981</p>
+                <button  class="direction-bttn" type="button">
+                    <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation/@34.72038,-76.959572,16z/data=!4m6!3m5!1s0x89a8ee4d488e55f5:0xc0712dc16a428e37!8m2!3d34.7180844!4d-76.9633626!16s%2Fg%2F1hc4zx1nr?hl=en&entry=ttu">
+                        Get Direction
+                    </a>
+                </button>
             </div>
             
             <div class="office">
-                <h2>Southeast</h2>
-                <p>Location: Fred and Alice Stanback Coastal Education Center<br>Hours: Open Monday through Friday: 9am – 5pm</p>
-                <p>Phone: 910-509-2838</p>
-                <p>Address: 309 W. Salisbury St.<br>Wrightsville Beach, NC 28480</p>
-                <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation+-+Southeast+Office+%26+Stanback+Coastal+Education+Center/@34.2165432,-77.8063841,17z/data=!3m1!4b1!4m5!3m4!1s0x89a9f30fa355a8db:0xcc5987151c95acba!8m2!3d34.2165388!4d-77.8041954">
-                    <button type="button">Get Direction</button>
-                  </a>
+                <h2 class="contact-text-body">Southeast</h2>
+                <p class="contact-info-font">Location: Fred and Alice Stanback Coastal Education Center<br>Hours: Open Monday through Friday: 9am – 5pm</p>
+                <p class="contact-phone">Phone: 910-509-2838</p>
+                <p class="contact-info-font">Address: 309 W. Salisbury St.<br>Wrightsville Beach, NC 28480</p>
+                <button  class="direction-bttn" type="button">
+                    <a href="https://www.google.com/maps/place/North+Carolina+Coastal+Federation/@34.72038,-76.959572,16z/data=!4m6!3m5!1s0x89a8ee4d488e55f5:0xc0712dc16a428e37!8m2!3d34.7180844!4d-76.9633626!16s%2Fg%2F1hc4zx1nr?hl=en&entry=ttu">
+                        Get Direction
+                    </a>
+                </button>
             </div>
             
-            <div class="media">
-                <h2>Media Contact</h2>
-                <p>Coastal Clean Ups<br>Communications Director<br>Email: coastalclean@nccoast.org<br>Phone: 252-393-8185</p>
+            <div class="office">
+                <h2 class="contact-text-body">Media Contact</h2>
+                <p class="contact-info-font">Coastal Clean Up<br>Communications Director<br>Email: Admin@CoastalCleanUp.org <br></p>
+                <p class="contact-phone">Phone: 252-393-8185</p>
             </div>
         </div>
     </div>

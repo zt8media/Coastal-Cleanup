@@ -2,67 +2,98 @@ const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const email = document.getElementById("emailAddress");
 const subject = document.getElementById("subject");
-const message = document.getElementById("message");
+const comment = document.getElementById("message");
 function errorMsg(input, msg) {
     const formc = input.parentElement;
     formc.classList.add("error");
-    const small = formc.querySelector("small");
-message
-    small.style.visibility = "visible";
-    if (!small) {
-        const small = document.createElement("small");
-        small.innerText = msg;
-        formc.appendChild(small);
-    } else {
-        small.innerText = msg;
-    }
+    let errorTag = formc.querySelector("p");
+    // message
+    // small.style.error = "visible";
+    if(errorTag){
+        errorTag.style.visibility = "visible"
+
+        errorTag.textContent = msg;
+
+    }    
+
     input.classList.add("error-input");
 };
 function removeErrorMsg(input) {
     const form = input.parentElement;
     form.classList.remove("error");
-    const small = form.querySelector("small");
-    if (small === "") {
-        small.remove();
-    }
+    let errorTag = form.querySelector("p");
+
+    errorTag.style.visibility = "hidden"
+
     input.classList.remove("error-input");
 
-    e.preventDefault();
+    // e.preventDefault();
 };
 form.addEventListener("submit", function(e) {
     e.preventDefault();
-    //let pass = true;
-        if (firstName.value === "") {
-         errorMsg(firstName, "First name is required");
+    let pass = true;
+    if (firstName.value.length < 1 || firstName.value.length >= 20) {
+        if(firstName.value.length < 1 ){
+            errorMsg(firstName, "First name is required");
+        } else {
+            errorMsg(firstName, "First name too long");
+        }
     }
     else {
         removeErrorMsg(firstName);
-        //pass = false
+        pass = false;
     }
-        if (lastName.value === "") {
-         errorMsg(lastName, "Last name is required");
+    if (lastName.value.length < 1 || lastName.value.length >= 20) {
+        if(lastName.value.length < 1 ){
+            errorMsg(lastName, "Last name is required");
+        } else {
+            errorMsg(lastName, "Last name too long");
+        }
     }
     else {
         removeErrorMsg(lastName);
+        pass = false;
     }
-    e.preventDefault();
-    if (emailAddress.value === "") {
-        errorMsg(email, "Email is required");
+    if (email.value === "" || !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+        errorMsg(email, "Invalid email address");
+        pass = false;
     } else {
         removeErrorMsg(email);
     }
-    e.preventDefault();
-    if (subject.value === "") {
+    if (subject.value === "" || subject.value.length >= 50) {
         errorMsg(subject, "Subject is required");
     } else {
         removeErrorMsg(subject);
+        pass = false;
     }
-    e.preventDefault();
-    if (message.value === "") {
-        errorMsg(message, "Message is required");
+    if (comment.value === "" || comment.value.length >= 500) {
+        errorMsg(comment, "Message is required");
     } else {
-        removeErrorMsg(message);
+        removeErrorMsg(comment);
+        pass = false;
     }
-    //var if everything pass
-    //if
+   
+    if (pass === true ) {
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: firstName.value,
+                lastName: lastName.value,
+                email: email.value,
+                subject: subject.value,
+                comment: comment.value
+            })
+        };
+        fetch(`/addQue`, options)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        alert(data.message)
+    })
+    .catch(error => console.error(error));
+    }
+
 });

@@ -6,6 +6,8 @@
 
 body {
   background: #EEEDE7;
+  /* Mobile devices (max-width: 480px) */
+  /* Tablets (min-width: 481px and max-width: 768px) */
 }
 body .image-background {
   background: url(/Juan/Media/cropped-beach.jpg) top center no-repeat;
@@ -16,7 +18,7 @@ body .image-background {
   transition: 0.5s ease;
 }
 body .image-background h1 {
-  color: #060e2c;
+  color: #19447D;
   font-size: 100px;
   font-family: "Bungee", sans-serif;
   position: relative;
@@ -29,7 +31,7 @@ body .image-background h1 {
 body .image-background .header-text {
   font-size: 25px;
   font-family: "Roboto", sans-serif;
-  color: #060e2c;
+  color: #19447D;
   position: relative;
   top: 520px;
   left: 50px;
@@ -66,7 +68,7 @@ body .container .description h2 {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-size: 40px;
-  color: #060e2c;
+  color: #19447D;
   border-bottom: 3px solid #5694BA;
 }
 body .container .description .paragraph {
@@ -94,7 +96,7 @@ body .statistics-box .stats-title {
 body .statistics-box .statistics-grid {
   border-radius: 8px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  background-color: #060e2c;
+  background-color: #19447D;
   color: #FFFFFF;
   font-size: 15px;
   text-align: center;
@@ -105,7 +107,7 @@ body .beach-api .beach {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #060e2c;
+  color: #19447D;
   font-size: 70px;
   font-family: "Bungee", sans-serif;
   padding: 20px;
@@ -127,7 +129,7 @@ body .beach-api .input-container #input {
 }
 body .beach-api .input-container #button {
   border: none;
-  background-color: #060e2c;
+  background-color: #19447D;
   text-decoration: none;
   padding: 15px;
   padding-bottom: 17px;
@@ -139,34 +141,40 @@ body .beach-api .input-container #button {
 }
 body .answer-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 500px;
-  margin: 100px auto;
-  padding: 40px;
-  background-color: #060e2c;
+  width: 80%;
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #19447D;
   border-radius: 8px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-body .answer-container .api-header-answer {
-  color: #FFFFFF;
-  font-size: 30px;
-  font-family: "Bungee", sans-serif;
+body .answer-container .api-img-answer {
+  width: 100%;
+  height: auto;
 }
-body .api-header-answer {
-  color: #FFFFFF;
-  font-size: 30px;
+body .answer-container .api-header-answer {
+  color: #81C3D7;
+  font-size: 1.5rem;
   font-family: "Bungee", sans-serif;
+  margin-top: 1rem;
+}
+body .answer-container .api-text-answer {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 body .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #060e2c;
-  font-size: 70px;
+  color: #19447D;
+  font-size: 5vw;
   font-family: "Bungee", sans-serif;
-  padding: 20px;
+  padding-top: 10vh;
 }
 body .collapsible {
   margin: 60px auto;
@@ -178,7 +186,7 @@ body .collapsible li {
   margin: 20px;
   padding: 10px;
   border-radius: 8px;
-  background: #060e2c;
+  background: #19447D;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 body .collapsible li label {
@@ -215,4 +223,143 @@ body label::before {
 }
 body input[type=radio] {
   display: none;
+}
+@media only screen and (max-width: 480px) {
+  body .image-background {
+    height: 500px;
+  }
+  body .image-background h1 {
+    font-size: 30px;
+    top: 350px;
+    left: 50px;
+  }
+  body .image-background .header-text {
+    font-size: 10px;
+    top: 350px;
+  }
+  body .container {
+    flex-direction: column;
+  }
+  body .why-is-container {
+    height: 400px;
+    padding: 10px 20px;
+  }
+  body .why-is-container h2 {
+    font-size: 30px;
+  }
+  body .why-is-container .paragraph {
+    font-size: 16px;
+  }
+  body .statistics-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 50px;
+  }
+  body .statistics-box .images {
+    height: 200px;
+    width: 300px;
+  }
+  body .beach-api .beach {
+    font-size: 18px;
+  }
+  body .beach-api .input-container #input {
+    width: 300px;
+    margin-right: 0;
+  }
+  body .beach-api .input-container #button {
+    width: 80px;
+  }
+  body .answer-container {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  body .title {
+    font-size: 30px;
+  }
+  body .collapsible {
+    width: 100%;
+  }
+  body .collapsible li {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  body .collapsible label {
+    font-size: 16px;
+  }
+  body .collapsible .content {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body .image-background {
+    height: 600px;
+  }
+  body .image-background h1 {
+    font-size: 30px;
+    top: 350px;
+  }
+  body .image-background .header-text {
+    font-size: 5px;
+    top: 350px;
+  }
+  body .container {
+    flex-direction: column;
+  }
+  body .why-is-container {
+    height: 500px;
+    padding: 20px 40px;
+  }
+  body .description {
+    padding-left: 5px;
+  }
+  body .description h2 {
+    font-size: 35px;
+  }
+  body .description .paragraph {
+    font-size: 18px;
+  }
+  body .statistics-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 75px;
+  }
+  body .statistics-box .images {
+    height: 250px;
+    width: 400px;
+  }
+  body .beach-api .beach {
+    font-size: 20px;
+  }
+  body .beach-api .input-container {
+    flex-direction: column;
+  }
+  body .beach-api .input-container #input {
+    width: 80%;
+    margin-right: 0;
+  }
+  body .beach-api .input-container #button {
+    width: 80%;
+  }
+  body .answer-container {
+    width: 80%;
+    margin: 3rem auto;
+  }
+  body .title {
+    font-size: 4vw;
+  }
+  body .collapsible {
+    width: 80%;
+  }
+  body .collapsible li {
+    margin: 20px;
+    padding: 20px;
+    font-size: 18px;
+  }
+  body .collapsible label {
+    font-size: 18px;
+  }
+  body .collapsible .content {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=learnmore.css.map */
