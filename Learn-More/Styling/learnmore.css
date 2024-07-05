@@ -5,6 +5,8 @@
 }
 
 body {
+  overflow-x: hidden;
+  padding-top: 20px;
   background: #EEEDE7;
   /* Mobile devices (max-width: 480px) */
   /* Tablets (min-width: 481px and max-width: 768px) */
@@ -226,7 +228,7 @@ body input[type=radio] {
 }
 @media only screen and (max-width: 480px) {
   body .image-background {
-    height: 500px;
+    display: none;
   }
   body .image-background h1 {
     font-size: 30px;
@@ -242,7 +244,7 @@ body input[type=radio] {
   }
   body .why-is-container {
     height: 400px;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
   body .why-is-container h2 {
     font-size: 30px;
@@ -293,7 +295,7 @@ body input[type=radio] {
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   body .image-background {
-    height: 600px;
+    display: none;
   }
   body .image-background h1 {
     font-size: 30px;
@@ -308,7 +310,7 @@ body input[type=radio] {
   }
   body .why-is-container {
     height: 500px;
-    padding: 20px 40px;
+    padding: 20px;
   }
   body .description {
     padding-left: 5px;

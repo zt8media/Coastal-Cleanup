@@ -457,6 +457,9 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    /* .footer {
+        padding: 100px;
+    } */
     .footer-logo img {
         height: 40px;
     }
