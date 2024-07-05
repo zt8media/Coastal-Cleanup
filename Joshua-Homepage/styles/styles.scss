@@ -157,26 +157,31 @@ nav {
 
 main {
     
+    .hero-header {
+
     video {
         width: 100%;
         height: 100%;
     }
 
     #hero-header {
-        color: white;
-        position: absolute;
-        transform: translate(-25vh, -60vh);
-        padding: 100px 300px;
+        color: black;
+        // position: absolute;
+        // transform: translate(-25vh, -60vh);
+        // padding: 100px 300px;
         font-size: 77px;
     }
 
     #hero-paragraph {
-        color: white;
-        position: absolute;
-        transform: translate(-25vh, -50vh);
-        padding: 100px 300px;
+        color: black;
+        // position: absolute;
+        // transform: translate(-25vh, -50vh);
+        // padding: 100px 300px;
         font-size: 77px;
     }
+
+    }
+
 
     h1 {
         @include bungee();

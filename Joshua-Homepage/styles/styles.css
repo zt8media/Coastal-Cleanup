@@ -76,22 +76,16 @@ header nav button {
   width: 10%;
 }
 
-main video {
+main .hero-header video {
   width: 100%;
   height: 100%;
 }
-main #hero-header {
-  color: white;
-  position: absolute;
-  transform: translate(-25vh, -60vh);
-  padding: 100px 300px;
+main .hero-header #hero-header {
+  color: black;
   font-size: 77px;
 }
-main #hero-paragraph {
-  color: white;
-  position: absolute;
-  transform: translate(-25vh, -50vh);
-  padding: 100px 300px;
+main .hero-header #hero-paragraph {
+  color: black;
   font-size: 77px;
 }
 main h1 {
