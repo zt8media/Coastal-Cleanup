@@ -255,17 +255,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Switch to Sign Up form
-    switchToSignUpBtn.addEventListener('click', function() {
-        loginForm.classList.add('hide');
-        signUpForm.classList.remove('hide');
-    });
+    // // Switch to Sign Up form
+    // switchToSignUpBtn.addEventListener('click', function() {
+    //     loginForm.classList.add('hide');
+    //     signUpForm.classList.remove('hide');
+    // });
 
-    // Switch to Login form
-    switchToLoginBtn.addEventListener('click', function() {
-        signUpForm.classList.add('hide');
-        loginForm.classList.remove('hide');
-    });
+    // // Switch to Login form
+    // switchToLoginBtn.addEventListener('click', function() {
+    //     signUpForm.classList.add('hide');
+    //     loginForm.classList.remove('hide');
+    // });
  
     // Close the hamburger menu and show the login modal
  loginBtn.addEventListener('click', () => {
@@ -391,3 +391,37 @@ document.addEventListener("DOMContentLoaded", function() {
         loginForm.classList.remove('hide');
     });
 });
+
+//END of form javascript
+
+//speech butoon 
+
+       // Check for browser support
+       window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+       if (window.SpeechRecognition) {
+           const recognition = new SpeechRecognition();
+           recognition.continuous = false;
+           recognition.interimResults = false;
+
+           const startRecordBtn = document.getElementById('start-record-btn');
+           const descriptionInput = document.getElementById('description');
+
+           startRecordBtn.addEventListener('click', () => {
+               recognition.start();
+           });
+
+           recognition.addEventListener('result', (event) => {
+               const transcript = event.results[0][0].transcript;
+               descriptionInput.value += transcript;
+           });
+
+           recognition.addEventListener('end', () => {
+               recognition.stop();
+           });
+       } else {
+           console.log('Speech recognition not supported in this browser.');
+       }
+
+       
+       
