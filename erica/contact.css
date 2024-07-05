@@ -1,13 +1,17 @@
 body {
     background-color: #EEEDE7;
+    margin:0;
+    padding:0;
 }
 .contact-text {
     font-size: 3em;
     font-family: "Bungee", sans-serif;
+    letter-spacing: 3px;
 }
 
 .contact-text-body {
     font-family: "Bungee", sans-serif;
+    font-size: 1.5em;
 }
 
 .form-font {
@@ -230,9 +234,8 @@ button:hover span {
     justify-content: space-evenly;
 }
 
-/* For tablets (portrait and landscape) */
-@media (min-width: 600px) and (max-width: 1024px) {
-    /* Your tablet-specific styles go here */
+/*media quuery for mobile*/
+@media (max-width: 769px) {
     .container {
         width: 80%;
         padding: 20px;
@@ -240,7 +243,7 @@ button:hover span {
 
     .banner {
         width: 90%;
-        padding: 15px;
+        bottom: 0px;
     }
 
     .formc input {
@@ -253,12 +256,14 @@ button:hover span {
 
     .split-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .office-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 15px;
     }
     
     .office {
@@ -270,8 +275,8 @@ button:hover span {
     .contact-text-body {
         justify-content: center;
     }
+
+    .contact-text {
+        font-size: 2em;
+    }
 }
- 
-
-
- 
