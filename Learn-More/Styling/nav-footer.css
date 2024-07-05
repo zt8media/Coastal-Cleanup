@@ -1,6 +1,5 @@
 body {
     font-family: "Roboto", sans-serif;
-
 }
 
 .container {
@@ -371,7 +370,7 @@ body {
 /* Footer styling */
 .footer {
     background-color:  #5694BA; /* Navy color */
-    padding: 20px 10px;
+    padding: 20px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     color: #EEEDE7; /* White color for text */
@@ -475,18 +474,3 @@ footer p {
         font-size: 14px;
     }
 }
-
-
-#micButton {
-    padding: 10px 20px;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #4CAF50; /* Initial background color */
-    color: white;
-    border: none;
-    border-radius: 50%;
-}
-
-#micButton.recording {
-    background-color: red;
-    }
