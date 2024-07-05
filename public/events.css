@@ -56,7 +56,7 @@ input, textarea {
       box-shadow: none;
 }
 
-button {
+.button-event {
     margin-top: 10px;
     padding: 10px;
     background-color: #81C3D7;
@@ -64,7 +64,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button-event:hover {
     background-color:#88cee3;
 }
 

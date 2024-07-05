@@ -40,8 +40,8 @@
             <li><a href="about.html" class="nav-item" id="about">About Us</a></li>
             <li><a href="events.html" class="nav-item" id="events">Events</a></li>
             <li><a href="contact.html" class="nav-item" id="contact">Contact</a></li>
-            <li><button class="nav-item" id="login-btn">Login</button></li>
-            <li><button class="nav-item" id="signout-btn">Signout</button></li>
+            <li><button  class="nav-item" id="login-btn">Login</button></li>
+            <li><button  class="nav-item" id="signout-btn">Signout</button></li>
         </ul>
     </nav>
 <!-- Navbar End -->
@@ -60,10 +60,10 @@
                 <input type="datetime-local" id="end" name="end" required>
                 <label for="description">Description:</label>
                 <textarea id="description" name="description"></textarea>
-                <button type="button" id="start-record-btn"><i class="fa fa-microphone"></i></button>
+                <button class="button-event" type="button" id="start-record-btn"><i class="fa fa-microphone"></i></button>
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" placeholder="Enter address or coordinates" required>
-                <button type="submit">Submit</button>
+                <button class="button-event" type="submit">Submit</button>
             </form>
             <div id="map"></div>
         </div>
@@ -85,8 +85,8 @@
                 <input type="text" id="login-username" name="username">
                 <label for="login-password">Password</label>
                 <input type="password" id="login-password" name="password">
-                <button type="submit" id="login-submit">Submit</button>
-                <button id="signUp" class="switch-form-button">Not a member? Sign up</button>
+                <button class="button-event" type="submit" id="login-submit">Submit</button>
+                <button class="button-event" id="signUp" class="switch-form-button">Not a member? Sign up</button>
             </form>
             <form  id="signUp-form" class="form-container hide">
                 <label for="signUp-email">Email</label>
@@ -95,8 +95,8 @@
                 <input type="text" id="signUp-username" name="username">
                 <label for="signUp-password">Password</label>
                 <input type="password" id="signUp-password" name="password">
-                <button type="submit" id="signUp-submit">Submit</button>
-                <button id="login" class="switch-form-button">Already a member? Login</button>
+                <button class="button-event"type="submit" id="signUp-submit">Submit</button>
+                <button class="button-event" id="login" class="switch-form-button">Already a member? Login</button>
             </form>
         </div>
     </div>
