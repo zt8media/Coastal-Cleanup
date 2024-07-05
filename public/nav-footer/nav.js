@@ -29,11 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-
 // log in information 
 document.addEventListener("DOMContentLoaded", function() {
     var loginBtn = document.getElementById('login-btn');
@@ -43,10 +38,47 @@ document.addEventListener("DOMContentLoaded", function() {
     var switchToLoginBtn = document.getElementById('login');
     var loginForm = document.getElementById('login-form');
     var signUpForm = document.getElementById('signUp-form');
+    var navLinks = document.querySelector('.nav-links');
+
+    function checkCookie() {
+        console.log(document.cookie);
+        if (document.cookie) {
+            loginBtn.innerHTML = 'Signout';
+        }
+        else {
+            loginBtn.innerHTML = 'Login';
+        }
+    }
+
+    function deleteAllCookies() {
+        document.cookie.split(';').forEach(cookie => {
+            const eqPos = cookie.indexOf('=');
+            const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        });
+    }
+    
+    checkCookie();
 
     // Show modal
     loginBtn.addEventListener('click', function() {
-        loginModal.style.display = "block";
+        console.log('login button clicked');
+        if (document.cookie) {
+            fetch('/logout')
+                .then(response => {
+                    if (response.status === 200) {
+                        deleteAllCookies();  
+                        checkCookie();                      
+                    }
+                    else {
+                        alert('Error logging out');
+                    }
+                })
+        }
+        else {
+            loginModal.style.display = "block";
+            checkCookie();
+        }
     });
 
     // Close modal
@@ -60,24 +92,25 @@ document.addEventListener("DOMContentLoaded", function() {
             loginModal.style.display = "none";
         }
     });
-
+    
     // // Switch to Sign Up form
-    // switchToSignUpBtn.addEventListener('click', function() {
-    //     loginForm.classList.add('hide');
-    //     signUpForm.classList.remove('hide');
-    // });
+    switchToSignUpBtn.addEventListener('click', function() {
+        loginForm.classList.add('hide');
+        signUpForm.classList.remove('hide');
+    });
 
     // // Switch to Login form
-    // switchToLoginBtn.addEventListener('click', function() {
-    //     signUpForm.classList.add('hide');
-    //     loginForm.classList.remove('hide');
-    // });
- 
+    switchToLoginBtn.addEventListener('click', function() {
+        signUpForm.classList.add('hide');
+        loginForm.classList.remove('hide');
+    });
+
     // Close the hamburger menu and show the login modal
- loginBtn.addEventListener('click', () => {
-    navLinks.classList.remove('open'); // Close the side menu
-    loginModal.style.display = "block";
-});
+    loginBtn.addEventListener('click', () => {
+        navLinks.classList.remove('open'); // Close the side menu
+        loginModal.style.display = "block";
+    });
+    
     // Form elements and validation functions
     const login_username = document.getElementById('login-username');
     const signUp_username = document.getElementById('signUp-username');
@@ -85,6 +118,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const signUp_password = document.getElementById('signUp-password');
     const signUp_email = document.getElementById('signUp-email');
 
+    loginForm.addEventListener('submit', (event) => event.preventDefault());
+    signUpForm.addEventListener('submit', (event) => event.preventDefault());
+
+    // Form validation functions
     function loginValidation() {
         const username = login_username;
         const password = login_password;
@@ -185,13 +222,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     alert(data.message);
                     return;
                 }
-                document.cookie = `token=${data.token}; path=/`;
-                if (data.admin) {
-                    window.location = '/admin';
-                }
-                else {
-                    window.location = '/home';
-                }
+                loginModal.style.display = "none";
+                document.cookie = 'signIn=true';
+                checkCookie();
             })
             .catch(error => console.error(error));
     });
@@ -226,12 +259,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (!data) {
                     return;
                 }
-                if (data.admin) {
-                    window.location = '/admin';
-                }
-                else {
-                    window.location = '/home';
-                }
+                loginModal.style.display = "none";
+                document.cookie = 'signIn=true';
+                checkCookie();
             })
             .catch(error => console.error(error));
     });

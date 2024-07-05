@@ -44,17 +44,12 @@ app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/contact/', 'contact.html'));
 });
 
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/about/', 'about.html'));
+app.get('/learn-more', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/learn-more/Html', 'learnmore.html'));
 });
 
 app.get('/events', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/events/', 'events.html'));
-});
-
-// in development
-app.get('/admin', access.verifyAdmin, (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/admin', 'admin.html'));
 });
 
 

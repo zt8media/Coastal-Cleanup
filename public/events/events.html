@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events Calendar</title>
     <link rel="stylesheet" href="https://unpkg.com/fullcalendar@5.10.1/main.min.css" />
-    <link rel="stylesheet" href="/events.css">
+    <link rel="stylesheet" href="/events/events.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhpISrGkZJeKil5cxmwbPMr4NcGAZWaxE&libraries=places"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +36,10 @@
             <div class="bar"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-item" id="home">Home</a></li>
-            <li><a href="about.html" class="nav-item" id="about">About Us</a></li>
-            <li><a href="events.html" class="nav-item" id="events">Events</a></li>
-            <li><a href="contact.html" class="nav-item" id="contact">Contact</a></li>
+            <li><a href="/home" class="nav-item" id="home">Home</a></li>
+            <li><a href="/learn-more" class="nav-item" id="about">Learn more</a></li>
+            <li><a href="/events" class="nav-item" id="events">Events</a></li>
+            <li><a href="/contact" class="nav-item" id="contact">Contact</a></li>
             <li><button  class="nav-item" id="login-btn">Login</button></li>
             <li><button  class="nav-item" id="signout-btn">Signout</button></li>
         </ul>
@@ -111,10 +111,10 @@
                 <span>Coastal Cleanup</span>
             </div>
             <ul class="footer-links">
-                <li><a href="index.html" class="footer-item">Home</a></li>
-                <li><a href="about.html" class="footer-item">About Us</a></li>
-                <li><a href="events.html" class="footer-item">Events</a></li>
-                <li><a href="contact.html" class="footer-item">Contact</a></li>
+                <li><a href="/home" class="footer-item">Home</a></li>
+                <li><a href="/learn-more" class="footer-item">Learn More</a></li>
+                <li><a href="/events" class="footer-item">Events</a></li>
+                <li><a href="/contact" class="footer-item">Contact</a></li>
             </ul>
             <div class="social-media">
                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -128,6 +128,7 @@
     <!-- footer end  -->
  
     <script src="https://unpkg.com/fullcalendar@5.10.1/main.min.js"></script>
-    <script src="/script.js"></script>
+    <script src="/events/script.js"></script>
+    <script src="/nav-footer/nav.js"></script>
 </body>
 </html>
