@@ -4,6 +4,8 @@ const path = require('path');
 const sequelize = require('./config/database');
 const Event = require('./models/event');
 
+
+
 const app = express();
 
 // Middleware

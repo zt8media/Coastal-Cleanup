@@ -1,6 +1,7 @@
 body {
     background-color: #EEEDE7;
 }
+
 .contact-text {
     font-size: 3em;
     font-family: "Bungee", sans-serif;
@@ -60,9 +61,11 @@ body {
     width: 500px;
     position: relative;
     bottom: 60px;
-    background-color: #EEEDE7;
+    background-color: #81c3d7;
+    box-shadow: 10px 10px lightblue;
     padding: 20px 20px 0px;
     border-radius: 10px;
+    height: 100px;
 }
 
 .email-link {
@@ -100,7 +103,7 @@ body {
     display: block;
     border: 1px solid gray;
     border-radius: 10px;
-    width: 100%;
+    width: 500px;
     height: 40px;
     padding: 8px;
 }
@@ -269,6 +272,10 @@ button:hover span {
 
     .contact-text-body {
         justify-content: center;
+    }
+
+    .form {
+        flex-direction: column;
     }
 }
  
