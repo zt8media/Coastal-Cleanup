@@ -5,6 +5,8 @@
 }
 
 body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding-top: 20px; /* Space for fixed navbar */
   background: #EEEDE7;
   /* Mobile devices (max-width: 480px) */
   /* Tablets (min-width: 481px and max-width: 768px) */
@@ -293,7 +295,7 @@ body input[type=radio] {
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   body .image-background {
-    height: 600px;
+    display: none;
   }
   body .image-background h1 {
     font-size: 30px;

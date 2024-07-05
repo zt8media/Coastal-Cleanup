@@ -12,6 +12,8 @@ $second-font: "Roboto", sans-serif;
    box-sizing: border-box;
 }
 body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 20px; /* Space for fixed navbar */
     background: $tertiary-color;
     .image-background {
         background: url(/Juan/Media/cropped-beach.jpg) top center no-repeat;
@@ -308,7 +310,7 @@ body {
 /* Tablets (min-width: 481px and max-width: 768px) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .image-background {
-    height: 600px;
+    display: none;
     h1 {
       font-size: 30px;
       top: 350px;
