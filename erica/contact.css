@@ -1,17 +1,13 @@
 body {
     background-color: #EEEDE7;
-    margin:0;
-    padding:0;
 }
 .contact-text {
     font-size: 3em;
     font-family: "Bungee", sans-serif;
-    letter-spacing: 3px;
 }
 
 .contact-text-body {
     font-family: "Bungee", sans-serif;
-    font-size: 1.5em;
 }
 
 .form-font {
@@ -79,16 +75,6 @@ body {
 .email-link:hover {
     color: #000000;
     text-decoration: none;
-}
-
-.learn-more {
-    text-decoration: underline;
-    color: black;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-.learn-more:hover {
-    color: purple;
 }
 
 .container {
@@ -244,8 +230,9 @@ button:hover span {
     justify-content: space-evenly;
 }
 
-/*media quuery for mobile*/
-@media (max-width: 769px) {
+/* For tablets (portrait and landscape) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Your tablet-specific styles go here */
     .container {
         width: 80%;
         padding: 20px;
@@ -253,7 +240,7 @@ button:hover span {
 
     .banner {
         width: 90%;
-        bottom: 0px;
+        padding: 15px;
     }
 
     .formc input {
@@ -266,14 +253,12 @@ button:hover span {
 
     .split-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .office-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 15px;
     }
     
     .office {
@@ -285,8 +270,8 @@ button:hover span {
     .contact-text-body {
         justify-content: center;
     }
-
-    .contact-text {
-        font-size: 2em;
-    }
 }
+ 
+
+
+ 
