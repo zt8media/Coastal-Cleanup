@@ -3,28 +3,7 @@
   padding: 0;
 }
 
-header nav {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  justify-content: space-between;
-  padding: 2% 5%;
-}
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  justify-content: space-between;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  list-style-type: none;
-  color: #5694BA;
-}
-header nav ul li {
-  padding-left: 20px;
-}
-header nav button {
+header button {
   font-size: 15px;
   width: 100%;
   height: 40px;
@@ -51,15 +30,15 @@ header nav button {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-header nav button:hover {
+header button:hover {
   background-color: white;
   color: black;
   outline: 0;
 }
-header nav button:active {
+header button:active {
   transform: scale(0.9);
 }
-header nav button span {
+header button span {
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
@@ -68,27 +47,23 @@ header nav button span {
   transition: 300ms;
   text-decoration: none;
 }
-header nav button:hover span {
+header button:hover span {
   background: none;
   text-decoration: none;
 }
-header nav button {
+header button {
   width: 10%;
 }
 
-main .hero-header video {
+#hero-video {
   width: 100%;
   height: 100%;
 }
-main .hero-header #hero-header {
-  color: black;
-  font-size: 77px;
+
+main .bulk {
+  margin: 15% 15%;
 }
-main .hero-header #hero-paragraph {
-  color: black;
-  font-size: 77px;
-}
-main h1 {
+main .bulk h1 {
   font-family: "Bungee", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -100,22 +75,21 @@ main h1 {
   color: #5694BA;
   font-size: 57px;
 }
-main .who-are-we {
-  display: flex;
+main .bulk .who-are-we {
+  display: grid;
+  grid-template-columns: repeat(2, 60%);
+  grid-template-rows: repeat(2, 50%);
   flex-direction: row;
-  margin: 10% 0;
-}
-main .who-are-we .who-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 5% 15%;
-}
-main .who-are-we .who-section #who-paragraph {
   text-align: left;
-  margin: 2% 0;
 }
-main .who-are-we .who-section button {
+main .bulk .who-are-we .who-section {
+  margin: 5% 15%;
+  grid-area: 1/1/2/2;
+}
+main .bulk .who-are-we .who-section #who-pic {
+  grid-area: 1/1/2/2;
+}
+main .bulk .who-are-we .who-section button {
   font-size: 15px;
   width: 100%;
   height: 40px;
@@ -142,15 +116,15 @@ main .who-are-we .who-section button {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-main .who-are-we .who-section button:hover {
+main .bulk .who-are-we .who-section button:hover {
   background-color: white;
   color: black;
   outline: 0;
 }
-main .who-are-we .who-section button:active {
+main .bulk .who-are-we .who-section button:active {
   transform: scale(0.9);
 }
-main .who-are-we .who-section button span {
+main .bulk .who-are-we .who-section button span {
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
@@ -159,39 +133,40 @@ main .who-are-we .who-section button span {
   transition: 300ms;
   text-decoration: none;
 }
-main .who-are-we .who-section button:hover span {
+main .bulk .who-are-we .who-section button:hover span {
   background: none;
   text-decoration: none;
 }
-main .who-are-we .who-section button {
+main .bulk .who-are-we .who-section button {
   margin: 3% 0%;
   width: 40%;
 }
-main .who-are-we img {
-  width: 80%;
-  height: 100%;
+main .bulk .who-are-we img {
   border-radius: 20px;
+  width: 50vh;
+  height: 70vh;
 }
-main .our-mission {
-  display: flex;
-  flex-direction: row;
-  margin: 10% 0;
-}
-main .our-mission .mission-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 5% 15%;
-}
-main .our-mission #mission-paragraph {
+main .bulk .our-mission {
+  display: grid;
+  grid-template-columns: repeat(2, 60%);
+  grid-template-rows: repeat(2, 50%);
   text-align: left;
   margin: 2% 0;
+  margin-top: 30vw;
 }
-main .our-mission img {
-  width: 80%;
-  height: 100%;
+main .bulk .our-mission #mission-pic {
+  grid-area: 1/1/2/2;
+}
+main .bulk .our-mission .mission-section {
+  margin: 5% 15%;
+  grid-area: 1/2/2/3;
+}
+main .bulk .our-mission img {
+  width: 55%;
+  height: 60vh;
   border-radius: 20px;
-  margin-left: 20%;
+  width: 60vh;
+  height: 40vh;
 }
 main p {
   font-family: "Roboto", sans-serif;
@@ -215,16 +190,6 @@ main #title {
 main button {
   position: relative;
   margin: 0 auto;
-}
-main .staff-photos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 30px;
-  padding: 15px;
-}
-main .home-gallery {
-  height: 60vh;
 }
 
 .company-photos {
@@ -622,16 +587,6 @@ footer nav ul li {
 }
 
 @media (max-width: 769px) {
-  .hero-paraph.hero-header {
-    padding: 0px;
-  }
-  .hero-header {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-header .hero-text {
-    padding: 0px;
-  }
   .footer-logo img {
     height: 40px;
   }
@@ -648,8 +603,98 @@ footer nav ul li {
     font-size: 14px;
   }
 }
-@media (max-width: 375px) {
-  .hero-text {
-    padding: 0;
+@media only screen and (min-width: 768px) and (max-width: 1214px) {
+  .who-are-we {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(2, 100%);
+    flex-direction: row;
+    text-align: left;
+  }
+  .who-are-we .who-section {
+    margin: 5% 15%;
+    grid-area: 2/1/3/2;
+  }
+  .who-are-we .who-section #who-pic {
+    grid-area: 1/1/2/2;
+  }
+  .who-are-we .who-section button {
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+    color: #FFFFFF;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    -moz-user-select: none;
+         user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .who-are-we .who-section button:hover {
+    background-color: white;
+    color: black;
+    outline: 0;
+  }
+  .who-are-we .who-section button:active {
+    transform: scale(0.9);
+  }
+  .who-are-we .who-section button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    text-decoration: none;
+  }
+  .who-are-we .who-section button:hover span {
+    background: none;
+    text-decoration: none;
+  }
+  .who-are-we .who-section button {
+    margin: 3% 0%;
+    width: 40%;
+  }
+  .who-are-we img {
+    border-radius: 20px;
+    width: 20vh;
+    height: 40vh;
+  }
+  .our-mission {
+    display: grid;
+    grid-template-columns: repeat(2, 60%);
+    grid-template-rows: repeat(2, 50%);
+    text-align: left;
+    margin: 2% 0;
+    margin-top: 30vw;
+  }
+  .our-mission #mission-pic {
+    grid-area: 1/1/2/2;
+  }
+  .our-mission .mission-section {
+    margin: 5% 15%;
+    grid-area: 1/2/2/3;
+  }
+  .our-mission img {
+    width: 55%;
+    height: 60vh;
+    border-radius: 20px;
+    width: 60vh;
+    height: 40vh;
   }
 }/*# sourceMappingURL=styles.css.map */
