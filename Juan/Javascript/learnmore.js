@@ -9,19 +9,25 @@ document.getElementById('button').addEventListener('click', () => {
     .then((data) => {
         const celsiusTemp = data.main.temp;
         const fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+        
+        // Get the weather icon code
+        const weatherIconCode = data.weather[0].icon;
+        const weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
 
         let weatherCondition = '';
         if (fahrenheitTemp >= 70 && fahrenheitTemp <= 80) {
-            weatherCondition = 'Is the perfect time to go to the beach!';
+            weatherCondition = 'It\'s the perfect time to go to the beach!';
         } else if (data.weather[0].main === 'Rain') {
-            weatherCondition = '    Is a bad time to go to the beach (it\'s raining)!';
+            weatherCondition = 'It\'s a bad time to go to the beach (it\'s raining)!';
         } else {
-            weatherCondition = 'Is not the perfect weather to go to the beach.';
+            weatherCondition = 'It\'s not the perfect weather to go to the beach.';
         }
 
         const weatherInfo = `
         <div class="answer-container">
-            <h1 class="api-header-answer">The temperature is ${fahrenheitTemp}°F. ${weatherCondition}</h1>
+            <img src="${weatherIconUrl}" alt="Weather Icon" class="api-img-answer">
+            <h3 class="api-header-answer">The temperature is ${fahrenheitTemp}°F.</h3>
+            <p class="api-text-answer">${weatherCondition}</p>
         </div>
         `;
 
