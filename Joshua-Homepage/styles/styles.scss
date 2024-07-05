@@ -51,6 +51,80 @@ $background: #EEEDE7;
     justify-content: space-around;
 }
 
+@mixin flexSection {
+    display: flex;
+    flex-direction: row;
+    margin: 10% 0;
+}
+
+@mixin imageSize {
+    width: 80%;
+    height: 100%;
+}
+
+@mixin leftAlign {
+    text-align: left;
+    margin: 2% 0;
+}
+
+@mixin imageBorderRadius {
+    border-radius: 20px;
+}
+
+@mixin buttonStyle {
+    button {
+        font-size: 15px; 
+        width: 100%;
+        height: 40px;
+        border: 0; 
+        border-radius: 8px;
+        background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+        color: #FFFFFF;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        line-height: 1em;
+        max-width: 100%;
+        min-width: 140px;
+        padding: 3px;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        transition: all .3s;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: black;
+        outline: 0;
+    }
+    
+    button:active {
+        transform: scale(0.9);
+    }
+    
+    button span {
+        background-color: rgb(5, 6, 45);
+        padding: 16px 24px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+        text-decoration: none;
+    }
+    
+    button:hover span {
+        background: none;
+        text-decoration: none;
+    }
+}
+
 
 
 
@@ -60,6 +134,7 @@ header {
 nav {
     @include navFlexCenter();
     padding: 2% 5%;
+
     ul {
         @include navFlexCenter();
         @include roboto-light();
@@ -70,46 +145,120 @@ nav {
             padding-left: 20px;
         }
     }
+
+    button {
+        @include buttonStyle();
+    }
 }
 }
 
 main {
+      
+    //   .wrapper::after {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     content: '';
+    //     background-image: radial-gradient(
+    //       circle at 36% 48%,
+    //       #000000,
+    //       rgba(11, 39, 65, 0.32) 87%,
+    //       rgba(0, 0, 0, 0)
+    //     );
+    //   }
+    
+    video {
+        width: 100%;
+        height: 100%;
+    }
+
+    #hero-header {
+        color: white;
+        position: absolute;
+        transform: translate(-25vh, -60vh);
+        padding: 100px 300px;
+        font-size: 77px;
+    }
+
+    #hero-paragraph {
+        color: white;
+        position: absolute;
+        transform: translate(-25vh, -50vh);
+        padding: 100px 300px;
+        font-size: 77px;
+    }
+
     h1 {
         @include bungee();
         text-align: center;
         margin-top: 1%;
         color: $header;
-        font-size: 67px;
+        font-size: 57px;
     }
 
-    #coastal-cleanup {
-        color: $header;
-        font-size: 109px;
-        transform: translate(0, -450%);
-        background-color: white;
-        margin: 0 10%;
-    }
+    // #coastal-cleanup {
+    //     color: $header;
+    //     font-size: 109px;
+    //     transform: translate(0, -450%);
+    //     background-color: white;
+    //     margin: 0 10%;
+    // }
 
-    .learn-more {
+    .who-are-we {
+        @include flexSection();
+
+        .who-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        // justify-content: flex-start;
+        margin: 5% 15%;
+
+        #who-paragraph {
+            @include leftAlign();
+        }
+       
 
         button {
-            padding: 20px;
-            font-size: 16px;
-            border-radius: 30px;
-            border: none;
-            background-color: $button;
+            @include buttonStyle();
+            margin: 3% 0;
+        }
+    } 
+    
+        img {
+            @include imageSize();
+            @include imageBorderRadius();
+            
         }
     }
+
+.our-mission {
+    @include flexSection();
+
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5% 15%;
+    }
+
+    #mission-paragraph {
+        @include leftAlign();
+    }
+
+    img {
+        @include imageSize();
+        @include imageBorderRadius();
+        margin-left: 20%;
+    }
+}
 
 
 
     p {
         @include roboto-light();
-        text-align: center;
         color: $paragraph;
         font-size: 25px;
     }
@@ -140,6 +289,7 @@ main {
       }
     }
 
+    
     // below are the company photo stylings
 .company-photos {
     @include navFlexCenter();
@@ -149,32 +299,14 @@ main {
         margin: 100px;
     }
 }
-.wrapper {
-    position: relative;
-    width: 100%;
-  }
-  
-  .wrapper::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-image: radial-gradient(
-      circle at 36% 48%,
-      #000000,
-      rgba(11, 39, 65, 0.32) 87%,
-      rgba(0, 0, 0, 0)
-    );
-  }
 
-video {
-    width: 100%;
-    height: 100%;
-}
 
 /* card slider css*/
+
+.list-wrapper {
+    margin-top: 10%;
+}
+
 .list {
     display: flex;
     padding: 10px;
@@ -188,6 +320,11 @@ video {
    .item {
     width:100%;
     padding: 0 60px;
+   }
+
+   .item-cleanup {
+    width:100%;
+    padding: 0 30px;
    }
    .content {
     background-color: $header;

@@ -12,11 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Coastal Cleanup - Home</title>
 </head>
 <body>
 
     <header>
+        
         <nav>
             <ul>
                 <li>Home</li>
@@ -27,6 +28,7 @@
                 <li></li>
                 <li>Contact Us</li>
             </ul>
+            <button>Login</button>
         </nav>
     </header>
 
@@ -34,31 +36,122 @@
     <main>
 
         <figure class="wrapper">
-            <!-- Video slideshow goes here --> <video autoplay loop muted>
-                <!-- <source src="" type="video/mp4"/> -->
+            <video autoplay loop muted>
+                <source src="/Joshua-Homepage/beach-cleanup-photos/Hero Section Video.mp4" type="video/mp4"/>
             </video>
+            <h1 id="hero-header">Protect Our Coastline</h1>
+            <p id="hero-paragraph">Volunteer Today!</p>
         </figure>
 
-
-        <h1 id="coastal-cleanup">Coastal Cleanup</h1>
 
         
-        <section class="learn-more">
-            <h1>Who are we?</h1>
-            <p>We are a non profit organization that strives to keep the planet the way that we found it. We do this by hosting weekly coastal cleanups, picking up debris and waste that either gets left behind by tourists or washes onto shore. By doing this, we reduce litter and protect our oceans.</p>
-            <button>Learn More</button>
+
+        <section class="who-are-we">
+
+            <section class="who-section">
+                <h1>Who are we?</h1>
+                    <p id="who-paragraph">We are a non profit organization that strives to keep the planet the way that we found it. We do this by hosting weekly coastal cleanups, picking up debris and waste that either gets left behind by tourists or washes onto shore. By doing this, we reduce litter and protect our oceans.</p>
+                        <button>Learn More</button>
+            </section>
+
+            <figure>
+                <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037600.jpg">
+            </figure>
+
+            </section>
+
+
+        <section class="our-mission">
+
+            <figure>
+                <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037593.jpg">
+            </figure>
+
+            <section class="mission-section">
+                <h1>Our Mission</h1>
+                    <p id="mission-paragraph"> Our planet is made of 97% water, yet 40% is severly polluted. We are a nonprofit that is looking to expand globally to help lower the water pollution crisis. </p>
+            </section>
+            
         </section>
+        
 
 
-        <h1>Our Mission</h1>
-        <p> Our planet is made of 97% water, yet 40% is severly polluted. Now since we're a nonprofit, <!-- go on to say that we're a small company looking to expand globally to help out with the pollution crisis--> </p>
-
-
-        <figure class="company-photos">
-            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-kirill-ozerov-109766512-9620528.jpg">
-            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-ron-lach-9034659.jpg">
-            <img src="/Joshua-Homepage//beach-cleanup-photos/pexels-ron-lach-9037204.jpg">
-        </figure>
+        <div id="title">
+            <h1>Coastal Cleanup Trips</h1>
+        </div>
+        <div class="list-wrapper">
+            <ul class="list">
+             <li class="item-cleanup">
+              <div class="content">
+               <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-kirill-ozerov-109766512-9620528.jpg" alt="beach-cleanup-photo" class="headshot">
+               <div class="profile-details">
+               </div>
+              </div>
+             </li>
+              <li class="item-cleanup">
+              <div class="content">
+               <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037204.jpg" alt="beach-cleanup-photo" class="headshot">
+               <div class="profile-details">
+               </div>
+              </div>
+             </li>
+             <li class="item-cleanup">
+              <div class="content">
+               <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9034659.jpg" alt="beach-cleanup-photo" class="headshot">
+               <div class="profile-details">
+               </div>
+              </div>
+             </li>
+             <li class="item-cleanup">
+              <div class="content">
+               <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037218.jpg" alt="beach-cleanup-photo" class="headshot">
+               <div class="profile-details"
+               </div>
+              </div>
+             </li>
+             <li class="item-cleanup">
+              <div class="content">
+               <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037597.jpg" alt="beach-cleanup-photo" class="headshot">
+               <div class="profile-details"
+               </div>
+              </div>
+             </li>
+             <li class="item-cleanup">
+                <div class="content">
+                 <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9034682.jpg" alt="beach-cleanup-photo" class="headshot">
+                 <div class="profile-details"
+                 </div>
+                </div>
+               </li>
+               <li class="item-cleanup">
+                <div class="content">
+                 <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9034672.jpg" alt="beach-cleanup-photo" class="headshot">
+                 <div class="profile-details">
+                 </div>
+                </div>
+               </li>
+               <li class="item-cleanup">
+                <div class="content">
+                 <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037213.jpg" alt="beach-cleanup-photo" class="headshot">
+                 <div class="profile-details">
+                 </div>
+                </div>
+               </li>
+               <li class="item-cleanup">
+                <div class="content">
+                 <img src="/Joshua-Homepage/beach-cleanup-photos/pexels-ron-lach-9037209.jpg" alt="beach-cleanup-photo" class="headshot">
+                 <div class="profile-details">
+                 </div>
+                </div>
+               </li>
+            </ul>
+            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
+              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+            </button>
+            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
+              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
+            </button>
+        </div>
 
 
         <div id="title">

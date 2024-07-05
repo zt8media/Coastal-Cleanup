@@ -24,7 +24,73 @@ header nav ul {
 header nav ul li {
   padding-left: 20px;
 }
+header nav button button {
+  font-size: 15px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+  color: #FFFFFF;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+header nav button button:hover {
+  background-color: white;
+  color: black;
+  outline: 0;
+}
+header nav button button:active {
+  transform: scale(0.9);
+}
+header nav button button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  text-decoration: none;
+}
+header nav button button:hover span {
+  background: none;
+  text-decoration: none;
+}
 
+main video {
+  width: 100%;
+  height: 100%;
+}
+main #hero-header {
+  color: white;
+  position: absolute;
+  transform: translate(-25vh, -60vh);
+  padding: 100px 300px;
+  font-size: 77px;
+}
+main #hero-paragraph {
+  color: white;
+  position: absolute;
+  transform: translate(-25vh, -50vh);
+  padding: 100px 300px;
+  font-size: 77px;
+}
 main h1 {
   font-family: "Bungee", sans-serif;
   font-style: normal;
@@ -35,33 +101,104 @@ main h1 {
   text-align: center;
   margin-top: 1%;
   color: #5694BA;
-  font-size: 67px;
+  font-size: 57px;
 }
-main #coastal-cleanup {
-  color: #5694BA;
-  font-size: 109px;
-  transform: translate(0, -450%);
-  background-color: white;
-  margin: 0 10%;
+main .who-are-we {
+  display: flex;
+  flex-direction: row;
+  margin: 10% 0;
 }
-main .learn-more {
+main .who-are-we .who-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  margin: 5% 15%;
 }
-main .learn-more button {
-  padding: 20px;
-  font-size: 16px;
-  border-radius: 30px;
-  border: none;
-  background-color: #C8D5B9;
+main .who-are-we .who-section #who-paragraph {
+  text-align: left;
+  margin: 2% 0;
+}
+main .who-are-we .who-section button {
+  margin: 3% 0;
+}
+main .who-are-we .who-section button button {
+  font-size: 15px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background-image: linear-gradient(144deg, #5694BA, #81C3D7 50%, #5694BA);
+  color: #FFFFFF;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+main .who-are-we .who-section button button:hover {
+  background-color: white;
+  color: black;
+  outline: 0;
+}
+main .who-are-we .who-section button button:active {
+  transform: scale(0.9);
+}
+main .who-are-we .who-section button button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  text-decoration: none;
+}
+main .who-are-we .who-section button button:hover span {
+  background: none;
+  text-decoration: none;
+}
+main .who-are-we img {
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+}
+main .our-mission {
+  display: flex;
+  flex-direction: row;
+  margin: 10% 0;
+}
+main .our-mission .mission-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5% 15%;
+}
+main .our-mission #mission-paragraph {
+  text-align: left;
+  margin: 2% 0;
+}
+main .our-mission img {
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  margin-left: 20%;
 }
 main p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-  text-align: center;
   color: #81C3D7;
   font-size: 25px;
 }
@@ -104,27 +241,11 @@ main .home-gallery {
   margin: 100px;
 }
 
-.wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.wrapper::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-image: radial-gradient(circle at 36% 48%, #000000, rgba(11, 39, 65, 0.32) 87%, rgba(0, 0, 0, 0));
-}
-
-video {
-  width: 100%;
-  height: 100%;
-}
-
 /* card slider css*/
+.list-wrapper {
+  margin-top: 10%;
+}
+
 .list {
   display: flex;
   padding: 10px;
@@ -139,6 +260,11 @@ video {
 .item {
   width: 100%;
   padding: 0 60px;
+}
+
+.item-cleanup {
+  width: 100%;
+  padding: 0 30px;
 }
 
 .content {
