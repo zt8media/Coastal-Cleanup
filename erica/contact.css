@@ -81,6 +81,16 @@ body {
     text-decoration: none;
 }
 
+.learn-more {
+    text-decoration: underline;
+    color: black;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.learn-more:hover {
+    color: purple;
+}
+
 .container {
     background-color: #EEEDE7;
     padding: 10px 10px;
