@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-hider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.form-container label {
+  margin-bottom: 10px;
+}
+.form-container input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+.form-container input.red-border {
+  border: 1px solid red;
+}
+.form-container button[type=submit] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.form-container button[type=submit]:hover {
+  background-color: #fff;
+  color: #000;
+}
+.form-container .switch-form-button {
+  color: cyan;
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+}
+.form-container .switch-form-button:hover {
+  text-decoration: underline;
+}
+
+.form-container.hide {
+  display: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  background-color: greenyellow;
+  height: 25px;
+  width: 25px;
+  border-radius: 4px;
+}
+
+.minus {
+  background-color: rgb(255, 91, 91);
+  height: 25px;
+  width: 25px;
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+
+.search_hide {
+  display: none;
+}
+
+.selected {
+  background-color: rgba(47, 227, 255, 0.25);
+  border: 1px solid rgba(47, 227, 255, 0.4);
+  border-radius: 4px;
+}
+
+.redBorder {
+  border: 1px solid red;
+}
+
+input:focus, select:focus {
+  outline: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, lightblue, lightblue, lightcoral, lightcoral, rgb(255, 187, 0), rgb(255, 187, 0));
+}
+
+#budget-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+}
+#budget-container #top-container {
+  display: flex;
+}
+#budget-container #top-container h1 {
+  font-weight: 500;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+}
+#budget-container #top-container img {
+  position: absolute;
+}
+#budget-container #middle-container {
+  display: flex;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+#budget-container #middle-container > div {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#budget-container #middle-container > div * {
+  text-align: center;
+}
+#budget-container #middle-container > div p {
+  font-size: 2rem;
+}
+#budget-container #middle-container > div num {
+  font-size: 1.4rem;
+}
+#budget-container #bottom-container {
+  display: flex;
+  flex-grow: 1;
+  height: 411px;
+}
+#budget-container #bottom-container #left-container {
+  display: flex;
+  flex-direction: row-reverse;
+  border-right: 4px solid black;
+}
+#budget-container #bottom-container #left-container #explorer {
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow: auto;
+}
+#budget-container #bottom-container #left-container #explorer #top-explorer p {
+  font-size: 20px;
+  text-align: center;
+}
+#budget-container #bottom-container #left-container #explorer #top-explorer input {
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer {
+  display: flex;
+  flex-direction: column;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span {
+  display: flex;
+  border-bottom: 2px solid black;
+  margin: 10px 0;
+  padding-bottom: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > p {
+  flex-grow: 1;
+  padding: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > p:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span .selected:hover {
+  background-color: rgba(47, 227, 255, 0.55);
+  border: 1px solid rgba(47, 227, 255, 0.7);
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > button {
+  margin-left: 10px;
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span {
+  display: flex;
+  border-bottom: 2px solid black;
+  margin: 10px 0;
+  padding-bottom: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span {
+  display: flex;
+  flex-grow: 1;
+  padding: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span p {
+  flex-grow: 1;
+  padding: 2px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span .selected:hover {
+  background-color: rgba(0, 128, 0, 0.25);
+  border: 1px solid rgba(0, 128, 0, 0.4);
+  border-radius: 4px;
+}
+#budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > button {
+  margin-left: 10px;
+  border-radius: 4px;
+}
+#budget-container #bottom-container #right-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#budget-container #bottom-container #right-container > span {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+#budget-container #bottom-container #right-container > span button, #budget-container #bottom-container #right-container > span input, #budget-container #bottom-container #right-container > span label, #budget-container #bottom-container #right-container > span select {
+  border-radius: 4px;
+  font-size: 20px;
+}
+#budget-container #bottom-container #right-container > span #inform {
+  color: red;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  #budget-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 700px;
+    width: 650px;
+    overflow: auto;
+  }
+  #budget-container #top-container {
+    display: flex;
+  }
+  #budget-container #top-container h1 {
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+  }
+  #budget-container #top-container img {
+    position: absolute;
+  }
+  #budget-container #middle-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+  #budget-container #middle-container > div {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  #budget-container #middle-container > div * {
+    text-align: center;
+  }
+  #budget-container #middle-container > div p {
+    font-size: 1.5rem;
+  }
+  #budget-container #middle-container > div num {
+    font-size: 1.25rem;
+  }
+  #budget-container #bottom-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  #budget-container #bottom-container #left-container {
+    display: flex;
+    flex-direction: row-reverse;
+    border-right: 4px solid black;
+  }
+  #budget-container #bottom-container #left-container #explorer {
+    flex-grow: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow: auto;
+  }
+  #budget-container #bottom-container #left-container #explorer #top-explorer p {
+    font-size: 20px;
+    text-align: center;
+  }
+  #budget-container #bottom-container #left-container #explorer #top-explorer span {
+    display: flex;
+    align-items: center;
+  }
+  #budget-container #bottom-container #left-container #explorer #top-explorer input {
+    flex-grow: 1;
+    margin: 0 4px;
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer {
+    display: flex;
+    flex-direction: column;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span {
+    display: flex;
+    border-bottom: 2px solid black;
+    margin: 10px 0;
+    padding-bottom: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > p {
+    flex-grow: 1;
+    padding: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > p:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span .selected:hover {
+    background-color: rgba(47, 227, 255, 0.55);
+    border: 1px solid rgba(47, 227, 255, 0.7);
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .folder > span > button {
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span {
+    display: flex;
+    border-bottom: 2px solid black;
+    margin: 10px 0;
+    padding-bottom: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span {
+    display: flex;
+    flex-grow: 1;
+    padding: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span p {
+    flex-grow: 1;
+    padding: 2px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > span:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span .selected:hover {
+    background-color: rgba(47, 227, 255, 0.55);
+    border: 1px solid rgba(47, 227, 255, 0.7);
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #left-container #explorer #bottom-explorer .item > span > button {
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+  #budget-container #bottom-container #right-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    margin-top: 10px;
+  }
+  #budget-container #bottom-container #right-container > span {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  #budget-container #bottom-container #right-container > span button, #budget-container #bottom-container #right-container > span input, #budget-container #bottom-container #right-container > span label, #budget-container #bottom-container #right-container > span select {
+    border-radius: 4px;
+    font-size: 20px;
+  }
+  #budget-container #bottom-container #right-container > span #inform {
+    color: red;
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=style.css.map */

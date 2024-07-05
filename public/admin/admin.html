@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <span>
+            <div id="Que">
+                <div id="queDisplay">
+                    <button>Display All Tables</button>
+                    <div>
+                    </div>
+                </div>
+                <span>
+                    <div id="addQue">
+                        <p>Add to Que</p>
+                        <label for="firstName">question</label>
+                        <input type="text" id="firstName" name="firstName">
+                        <label for="lastName">answer</label>
+                        <input type="text" id="lastName" name="lastName">
+                        <label for="email">email</label>
+                        <input type="text" id="email" name="email">
+                        <label for="subject">subject</label>
+                        <input type="text" id="subject" name="subject">
+                        <label for="comment">comment</label>
+                        <textarea id="comment" name="comment"></textarea>
+                        <button type="submit" id="addQue-submit">submit</button>
+                    </div>
+                    <div id="deleteQue">
+                        <p>Delete from Que</p>
+                        <label for="deleteQue-id">id</label>
+                        <input type="number" id="deleteQue-id" name="id">
+                        <button type="submit" id="deleteQue-submit">submit</button>
+                    </div>
+                </span>
+            </div>
+            <div id="events">
+                <div id="eventDisplay">
+                    <button>Display All Tables</button>
+                    <div>
+                    </div>
+                </div>
+                <span>
+                    <div id="addEvent">
+                        <p>Add an Event</p>
+                        <label for="addEvent-title">title</label>
+                        <input type="text" id="addEvent-title" name="title">
+                        <label for="addEvent-description">description</label>
+                        <input type="text" id="addEvent-description" name="description">
+                        <label for="addEvent-start_date">start_date</label>
+                        <input type="date" id="addEvent-start_date" name="start_date">
+                        <label for="addEvent-end_date">end_date</label>
+                        <input type="date" id="addEvent-end_date" name="end_date">
+                        <label for="addEvent-location">location</label>
+                        <input type="text" id="addEvent-location" name="location">
+                        <label for="addEvent-source">source</label>
+                        <input type="text" id="addEvent-source" name="source">
+                        <label for="addEvent-userID">userID</label>
+                        <input type="text" id="addEvent-userID" name="userID">
+                        <button type="submit" id="addEvent-submit">submit</button>
+                    </div>
+                    <div id="updateEvent">
+                        <p>Update an Event</p>
+                        <label for="deleteEvent-id">id</label>
+                        <input type="number" id="updateEvent-id" name="id">
+                        <label for="updateEvent-title">title</label>
+                        <input type="text" id="updateEvent-title" name="title">
+                        <label for="updateEvent-description">description</label>
+                        <input type="text" id="updateEvent-description" name="description">
+                        <label for="updateEvent-start_date">start_date</label>
+                        <input type="date" id="updateEvent-start_date" name="start_date">
+                        <label for="updateEvent-end_date">end_date</label>
+                        <input type="date" id="updateEvent-end_date" name="end_date">
+                        <label for="updateEvent-location">location</label>
+                        <input type="text" id="updateEvent-location" name="location">
+                        <label for="updateEvent-source">source</label>
+                        <input type="text" id="updateEvent-source" name="source">
+                        <label for="updateEvent-userID">userID</label>
+                        <input type="text" id="updateEvent-userID" name="userID">
+                        <button type="submit" id="updateEvent-submit">submit</button>
+                    </div>
+                    <div id="deleteEvent">
+                        <p>Delete an Event</p>
+                        <label for="deleteEvent-id">id</label>
+                        <input type="number" id="deleteEvent-id" name="id">
+                        <button type="submit" id="deleteEvent-submit">submit</button>
+                    </div>
+                </span>
+            </div>
+            <div id="users">
+                <div id="userDisplay">
+                    <button>Display All Tables</button>
+                    <div>
+                    </div>
+                </div>
+                <span>
+                    <div id="addUser">
+                        <p>Add a User</p>
+                        <label for="addUser-username">username</label>
+                        <input type="text" id="addUser-username" name="username">
+                        <label for="addUser-password">password</label>
+                        <input type="password" id="addUser-password" name="password">
+                        <button type="submit" id="addUser-submit">submit</button>
+                    </div>
+                    <div id="updateUser">
+                        <p>Update a User</p>
+                        <label for="updateUser-username">username</label>
+                        <input type="text" id="updateUser-username" name="username">
+                        <label for="updateUser-password">password</label>
+                        <input type="password" id="updateUser-password" name="password">
+                        <button type="submit" id="updateUser-submit">submit</button>
+                    </div>
+                    <div id="deleteUser">
+                        <p>Delete a User</p>
+                        <label for="deleteUser-username">username</label>
+                        <input type="text" id="deleteUser-username" name="username">
+                        <button type="submit" id="deleteUser-submit">submit</button>
+                    </div>
+                </span>
+            </div>
+        </span>
+        
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

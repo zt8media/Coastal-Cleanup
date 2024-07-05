@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="login-form" class="form-container">
+            <label for="login-username">username</label>
+            <input type="text" id="login-username" name="username">
+            <label for="login-password">password</label>
+            <input type="password" id="login-password" name="password">
+            <button type="submit" id="login-submit">submit</button>
+            <button id="signUp" class="switch-form-button">not a member sign up</button>
+        </div>
+        <div id="signUp-form" class="form-container hide">
+            <label for="signUp-email">email</label>
+            <input type="text" id="signUp-email" name="email">
+            <label for="signUp-username">username</label>
+            <input type="text" id="signUp-username" name="username">
+            <label for="signUp-password">password</label>
+            <input type="password" id="signUp-password" name="password">
+            <button type="submit" id="signUp-submit">submit</button>
+            <button id="login" class="switch-form-button">already a member login</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

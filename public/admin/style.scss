@@ -1,0 +1,204 @@
+// Color palette
+$sky-blue: #5694BA;
+$tea-green: #81C3D7;
+$pale-green: #C8D5B9;
+$white: #FFFFFF;
+$background: #EEEDE7;
+$light-grey: #F5F5F5;
+$grey: #D3D3D3;
+
+// Base styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: $background;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+// Reusable Mixins
+@mixin label-style {
+    font-weight: bold;
+    color: $sky-blue;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@mixin input-style {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $pale-green;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+@mixin button-style {
+    background-color: $sky-blue;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($sky-blue, 10%);
+    }
+}
+
+// Specific Element Styles
+#Que, #events, #users {
+    background-color: lighten($background, 5%);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    @include label-style;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+textarea {
+    @include input-style;
+}
+
+button {
+    @include button-style;
+}
+
+// Section-specific styles
+#Que, #events, #users {
+    p {
+        font-size: 16px;
+        color: darken($sky-blue, 20%);
+        margin-bottom: 10px;
+    }
+}
+
+#Que {
+    border-left: 5px solid $sky-blue;
+
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    div {
+        background-color: $tea-green;
+        padding: 15px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    #queDisplay {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            background-color: $light-grey;
+            color: $grey;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+}
+
+#events {
+    border-left: 5px solid $tea-green;
+
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    div {
+        background-color: $pale-green;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #eventDisplay {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            background-color: $light-grey;
+            color: $grey;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+}
+
+#users {
+    border-left: 5px solid $pale-green;
+
+    display: flex;
+    flex-direction: column;
+
+    span {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    div {
+        background-color: $grey;
+        color: $white;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #userDisplay {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            background-color: $light-grey;
+            color: $grey;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+}
