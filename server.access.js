@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const mysql = require('mysql2');
+const Event = require('./event');
 
 const connection = mysql.createConnection({
     host: process.env.DB_HOST,
