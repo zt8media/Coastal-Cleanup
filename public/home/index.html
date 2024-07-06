@@ -32,16 +32,17 @@
             <div class="bar"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-item" id="home">Home</a></li>
+            <li><a href="/public/home/index.html" class="nav-item" id="home">Home</a></li>
             <li><a href="about.html" class="nav-item" id="about">About Us</a></li>
-            <li><a href="events.html" class="nav-item" id="events">Events</a></li>
-            <li><a href="contact.html" class="nav-item" id="contact">Contact</a></li>
+            <li><a href="/public/events/events.html" class="nav-item" id="events">Events</a></li>
+            <li><a href="/public/contact/contact.html" class="nav-item" id="contact">Contact</a></li>
             <li><button class="nav-item" id="login-btn">Login</button></li>
             <li><button class="nav-item" id="signout-btn">Signout</button></li>
         </ul>
     </nav>
 <!-- Navbar End -->
 
+<!-- loginModal for sign up -->
         <div id="loginModal" class="modal">
             <div class="modal-content">
                 <span class="close-btn">&times;</span>
@@ -78,7 +79,7 @@
             <video autoplay loop muted id="hero-video">
                 <source src="/public/home/beach-cleanup-photos/Hero Section Video.mp4" type="video/mp4"/>
             </video>
-            
+
             <div class="hero-container">
                 <h1 id="hero-header">Coastal Cleanup</h1>
                 <p id="hero-paragraph">Wave goodbye to waste</p>
@@ -91,11 +92,12 @@
         <section class="who-are-we">
 
             <section class="who-section">
-                <h1>Who are we?</h1>
+                    <h1>Who are we?</h1>
                 
                     <p id="who-paragraph">We are a non profit organization that strives to keep the planet the way that we found it. We do this by hosting weekly coastal cleanups, picking up debris and waste that either gets left behind by tourists or washes onto shore. By doing this, we reduce litter and protect our oceans.</p>
+                
 
-                        <button>Learn More</button>
+                        <button id="learn-more-button"><a href="/public/learn-more/Html/learnmore.html"></a>Learn More</button>
             </section>
 
             <figure>
@@ -128,11 +130,11 @@
         
     </div>
 
-        <div id="title">
+        <div id="title-cleanup">
             <h1>Coastal Cleanup Trips</h1>
         </div>
         <div class="list-wrapper">
-            <ul class="list">
+            <ul class="list cleanup_photos">
              <li class="item-cleanup">
               <div class="content">
                <img src="/public/home/beach-cleanup-photos/pexels-kirill-ozerov-109766512-9620528.jpg" alt="beach-cleanup-photo" class="headshot">
@@ -164,14 +166,14 @@
              <li class="item-cleanup">
               <div class="content">
                <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037597.jpg" alt="beach-cleanup-photo" class="headshot">
-               <div class="profile-details"
+               <div class="profile-details">
                </div>
               </div>
              </li>
              <li class="item-cleanup">
                 <div class="content">
                  <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9034682.jpg" alt="beach-cleanup-photo" class="headshot">
-                 <div class="profile-details"
+                 <div class="profile-details">
                  </div>
                 </div>
                </li>
@@ -197,20 +199,24 @@
                 </div>
                </li>
             </ul>
-            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
-              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
-            </button>
-            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
+            <div class="button-space">
+                <button onclick="handleClick('next', 'headshot_photos')" id="button--next" type="button" alt="imageof">
+                <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: black"></i>
+              </button>
+
+              <div></div>
+
+            <button onclick="handleClick('previous', 'headshot_photos')" id="button--previous" type="button" alt="imageof">
+              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: black;"></i>
             </button>
         </div>
 
 
-        <div id="title">
+        <div id="title-staff">
             <h2>Meet our Staff</h2>
         </div>
         <div class="list-wrapper">
-            <ul class="list">
+            <ul class="list headshot_photos">
              <li class="item">
               <div class="content">
                <img src="/public/home/headshots/zariyah_tate_headshot_1__720.jpg" alt="staff-picture" class="headshot">
@@ -257,12 +263,19 @@
               </div>
              </li>
             </ul>
-            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
-              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+            <div class="button-space">
+                <button onclick="handleClick('next', 'headshot_photos')" id="button--next" type="button" alt="imageof">
+                <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: black"></i>
+              </button>
+
+              <!-- <div></div> -->
+            
+            <button onclick="handleClick('previous', 'headshot_photos')" id="button--previous" type="button" alt="imageof">
+              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: black;"></i>
             </button>
-            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
-            </button>
+            </div>
+            
+
         </div>
 
     </main>
@@ -295,14 +308,15 @@
 <!-- footer end  -->
 
     <script>
-        const list = document.querySelector(".list");
-//creating a function that based on the starting width of the arrow icon it will either scroll smoothly to the left or the right
-function handleClick(direction) {
- // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
- const item = document.querySelector(".item");
- const itemWidth = item.offsetWidth;
- // Based on the direction we call `scrollBy` with the item width we got earlier
-direction === "previous" ?   list.scrollBy({ left: -itemWidth, behavior: "smooth" }) :   list.scrollBy({ left: itemWidth, behavior: "smooth" });
+        
+function handleClick(direction, listName) {
+    //creating a function that based on the starting width of the arrow icon it will either scroll smoothly to the left or the right
+    const list = document.querySelector(`.${listName}`);
+    // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+    const item = document.querySelector(".item");
+    // Based on the direction we call `scrollBy` with the item width we got earlier
+    const itemWidth = item.offsetWidth;
+    direction === "previous" ?   list.scrollBy({ left: -itemWidth, behavior: "smooth" }) :   list.scrollBy({ left: itemWidth, behavior: "smooth" });
 }
     </script>
     <script src="script.js"></script>

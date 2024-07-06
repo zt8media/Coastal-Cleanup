@@ -340,10 +340,20 @@ main {
 }
 
 
-//below puts 
+// this puts the sections in a column
 @media only screen and (max-width: 768px) {
-    .who-are-we, .our-mission {
+    main .who-are-we, main .our-mission {
         grid-template-columns: 1fr;
     }
     
+}
+
+@media only screen and (max-width: 425px) {
+    html h1, h2 {
+        font-size: 40px;
+    }
+
+    main .who-are-we p, main .our-mission p {
+        font-size: 20px;
+    }
 }
