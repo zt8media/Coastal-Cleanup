@@ -24,6 +24,9 @@ app.get('/', (req, res) => res.redirect('/home'));
 // to serve static files
 app.use(express.static('public'));
 
+// to server static pictures
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 // to parse URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 
