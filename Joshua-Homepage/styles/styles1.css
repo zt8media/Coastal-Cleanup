@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#hero-video {
+  width: 100%;
+  height: 100%;
+}
+
 header button {
   font-size: 15px;
   width: 100%;
@@ -53,11 +58,6 @@ header button:hover span {
 }
 header button {
   width: 10%;
-}
-
-#hero-video {
-  width: 100%;
-  height: 100%;
 }
 
 main .bulk {
@@ -606,12 +606,11 @@ footer nav ul li {
     font-size: 14px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1214px) {
+@media only screen and (min-width: 768px) and (max-width: 1120px) {
   .who-are-we {
     display: grid;
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(2, 100%);
-    flex-direction: row;
     text-align: left;
   }
   .who-are-we .who-section {
@@ -680,8 +679,8 @@ footer nav ul li {
   }
   .our-mission {
     display: grid;
-    grid-template-columns: repeat(2, 60%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(2, 100%);
     text-align: left;
     margin: 2% 0;
     margin-top: 30vw;
@@ -691,13 +690,10 @@ footer nav ul li {
   }
   .our-mission .mission-section {
     margin: 5% 15%;
-    grid-area: 1/2/2/3;
+    grid-area: 2/1/3/2;
   }
   .our-mission img {
-    width: 55%;
-    height: 60vh;
-    border-radius: 20px;
     width: 60vh;
     height: 40vh;
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles1.css.map */
