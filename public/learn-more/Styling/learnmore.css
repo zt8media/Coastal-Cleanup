@@ -10,11 +10,10 @@ body {
   /* Tablets (min-width: 481px and max-width: 768px) */
 }
 body .image-background {
-  background: url(/Juan/Media/cropped-beach.jpg) top center no-repeat;
-  top: -300px;
+  background: url(/Learn-More/Media/cropped-beach.jpg) top center no-repeat;
   background-size: cover;
-  max-width: 100%;
-  height: 900px;
+  max-width: 100vw;
+  height: 80vh;
   transition: 0.5s ease;
 }
 body .image-background h1 {
@@ -39,15 +38,15 @@ body .image-background .header-text {
   animation: fadeInLeft;
   animation-duration: 2s;
 }
-body .container {
+body .cont {
   display: flex;
   margin-top: 30px;
 }
-body .container .why-is-container {
+body .cont .why-is-container {
   height: 600px;
   padding: 5px 60px;
 }
-body .container .why-is-container .why-is {
+body .cont .why-is-container .why-is {
   max-width: 100%;
   height: 80%;
   -o-object-fit: cover;
@@ -55,23 +54,20 @@ body .container .why-is-container .why-is {
   animation: fadeInBottomLeft;
   animation-duration: 4s;
 }
-body .container .description {
+body .cont .description {
   width: 70vmin;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
-  left: 200px;
-  top: -70px;
 }
-body .container .description h2 {
+body .cont .description h2 {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-size: 40px;
   color: #19447D;
   border-bottom: 3px solid #5694BA;
 }
-body .container .description .paragraph {
+body .cont .description .paragraph {
   padding: 10px;
   font-size: 20px;
   line-height: 1.5em;
@@ -79,9 +75,9 @@ body .container .description .paragraph {
 }
 body .statistics-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  margin: 100px;
+  grid-template-columns: repeat(3, 480px);
+  gap: 40px;
+  justify-content: center;
 }
 body .statistics-box .images {
   height: 267px;
@@ -178,7 +174,7 @@ body .title {
 }
 body .collapsible {
   margin: 60px auto;
-  width: 900px;
+  width: 50vw;
 }
 body .collapsible li {
   list-style: none;
@@ -226,7 +222,7 @@ body input[type=radio] {
 }
 @media only screen and (max-width: 480px) {
   body .image-background {
-    height: 500px;
+    display: none;
   }
   body .image-background h1 {
     font-size: 30px;
@@ -237,12 +233,10 @@ body input[type=radio] {
     font-size: 10px;
     top: 350px;
   }
-  body .container {
-    flex-direction: column;
-  }
   body .why-is-container {
     height: 400px;
-    padding: 10px 20px;
+    width: 100%;
+    display: none;
   }
   body .why-is-container h2 {
     font-size: 30px;
@@ -251,13 +245,12 @@ body input[type=radio] {
     font-size: 16px;
   }
   body .statistics-box {
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px;
     gap: 30px;
-    margin: 50px;
   }
   body .statistics-box .images {
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 400px;
   }
   body .beach-api .beach {
     font-size: 18px;
@@ -278,6 +271,7 @@ body input[type=radio] {
   }
   body .collapsible {
     width: 100%;
+    padding-right: 20px;
   }
   body .collapsible li {
     margin: 10px;
@@ -291,27 +285,17 @@ body input[type=radio] {
     font-size: 14px;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  body .image-background {
-    height: 600px;
-  }
+@media (max-width: 768px) {
   body .image-background h1 {
-    font-size: 30px;
-    top: 350px;
+    font-size: 3rem;
+    top: 480px;
   }
   body .image-background .header-text {
-    font-size: 5px;
-    top: 350px;
-  }
-  body .container {
-    flex-direction: column;
-  }
-  body .why-is-container {
-    height: 500px;
-    padding: 20px 40px;
+    font-size: 1.2rem;
+    top: 480px;
   }
   body .description {
-    padding-left: 5px;
+    left: 30px;
   }
   body .description h2 {
     font-size: 35px;
@@ -320,9 +304,8 @@ body input[type=radio] {
     font-size: 18px;
   }
   body .statistics-box {
-    grid-template-columns: 1fr;
+    grid-template-columns: 500px;
     gap: 30px;
-    margin: 75px;
   }
   body .statistics-box .images {
     height: 250px;
@@ -346,20 +329,9 @@ body input[type=radio] {
     margin: 3rem auto;
   }
   body .title {
-    font-size: 4vw;
+    font-size: 2.5rem;
   }
-  body .collapsible {
-    width: 80%;
-  }
-  body .collapsible li {
-    margin: 20px;
-    padding: 20px;
-    font-size: 18px;
-  }
-  body .collapsible label {
-    font-size: 18px;
-  }
-  body .collapsible .content {
-    font-size: 16px;
-  }
+}
+body .collapsible {
+  width: 70vw;
 }/*# sourceMappingURL=learnmore.css.map */
