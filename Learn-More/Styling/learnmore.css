@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  padding-top: 20px;
+  background: #EEEDE7;
+  /* Mobile devices (max-width: 480px) */
+  /* Tablets (min-width: 481px and max-width: 768px) */
+}
+body .image-background {
+  background: url(/Learn-More/Media/cropped-beach.jpg) top center no-repeat;
+  background-size: cover;
+  max-width: 100vw;
+  height: 80vh;
+  transition: 0.5s ease;
+}
+body .image-background h1 {
+  color: #19447D;
+  font-size: 100px;
+  font-family: "Bungee", sans-serif;
+  position: relative;
+  top: 520px;
+  left: 50px;
+  transition: 0.5s ease;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+body .image-background .header-text {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  color: #19447D;
+  position: relative;
+  top: 520px;
+  left: 50px;
+  transition: 0.5s ease;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+body .cont {
+  display: flex;
+  margin-top: 30px;
+}
+body .cont .why-is-container {
+  height: 600px;
+  padding: 5px 60px;
+}
+body .cont .why-is-container .why-is {
+  max-width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: fadeInBottomLeft;
+  animation-duration: 4s;
+}
+body .cont .description {
+  width: 70vmin;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body .cont .description h2 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #19447D;
+  border-bottom: 3px solid #5694BA;
+}
+body .cont .description .paragraph {
+  padding: 10px;
+  font-size: 20px;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+body .statistics-box {
+  display: grid;
+  grid-template-columns: repeat(3, 480px);
+  gap: 40px;
+  justify-content: center;
+}
+body .statistics-box .images {
+  height: 267px;
+  width: 400px;
+  border-radius: 4px;
+}
+body .statistics-box .stats-title {
+  font-family: "Bungee", sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+body .statistics-box .statistics-grid {
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  background-color: #19447D;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 30px;
+}
+body .beach-api .beach {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #19447D;
+  font-size: 70px;
+  font-family: "Bungee", sans-serif;
+  padding: 20px;
+}
+body .beach-api .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .beach-api .input-container #input {
+  width: 800px;
+  padding: 14px;
+  font-size: 17px;
+  color: black;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border: 2px solid #fff;
+  margin-right: -10px;
+}
+body .beach-api .input-container #button {
+  border: none;
+  background-color: #19447D;
+  text-decoration: none;
+  padding: 15px;
+  padding-bottom: 17px;
+  font-size: 17px;
+  color: #fff;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  cursor: pointer;
+}
+body .answer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #19447D;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+body .answer-container .api-img-answer {
+  width: 100%;
+  height: auto;
+}
+body .answer-container .api-header-answer {
+  color: #81C3D7;
+  font-size: 1.5rem;
+  font-family: "Bungee", sans-serif;
+  margin-top: 1rem;
+}
+body .answer-container .api-text-answer {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+body .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #19447D;
+  font-size: 5vw;
+  font-family: "Bungee", sans-serif;
+  padding-top: 10vh;
+}
+body .collapsible {
+  margin: 60px auto;
+  width: 50vw;
+}
+body .collapsible li {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #19447D;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+body .collapsible li label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-family: "Bungee", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+body .collapsible .content {
+  color: #FFFFFF;
+  padding: 0 10px;
+  line-height: 26px;
+  font-family: "Roboto", sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+body .collapsible input[type=radio]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+body .collapsible input[type=radio]:checked + label::before {
+  content: "-";
+}
+body label::before {
+  content: "+";
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+body input[type=radio] {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  body .image-background {
+    display: none;
+  }
+  body .image-background h1 {
+    font-size: 30px;
+    top: 350px;
+    left: 50px;
+  }
+  body .image-background .header-text {
+    font-size: 10px;
+    top: 350px;
+  }
+  body .why-is-container {
+    height: 400px;
+<<<<<<<< HEAD:public/learn-more/Styling/learnmore.css
+    width: 100%;
+    display: none;
+========
+    padding: 10px 10px;
+>>>>>>>> refs/remotes/origin/zari-branch:Learn-More/Styling/learnmore.css
+  }
+  body .why-is-container h2 {
+    font-size: 30px;
+  }
+  body .why-is-container .paragraph {
+    font-size: 16px;
+  }
+  body .statistics-box {
+    grid-template-columns: 200px;
+    gap: 30px;
+  }
+  body .statistics-box .images {
+    height: 250px;
+    width: 400px;
+  }
+  body .beach-api .beach {
+    font-size: 18px;
+  }
+  body .beach-api .input-container #input {
+    width: 300px;
+    margin-right: 0;
+  }
+  body .beach-api .input-container #button {
+    width: 80px;
+  }
+  body .answer-container {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  body .title {
+    font-size: 30px;
+  }
+  body .collapsible {
+    width: 100%;
+    padding-right: 20px;
+  }
+  body .collapsible li {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  body .collapsible label {
+    font-size: 16px;
+  }
+  body .collapsible .content {
+    font-size: 14px;
+  }
+}
+<<<<<<<< HEAD:public/learn-more/Styling/learnmore.css
+@media (max-width: 768px) {
+========
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body .image-background {
+    display: none;
+  }
+>>>>>>>> refs/remotes/origin/zari-branch:Learn-More/Styling/learnmore.css
+  body .image-background h1 {
+    font-size: 3rem;
+    top: 480px;
+  }
+  body .image-background .header-text {
+<<<<<<<< HEAD:public/learn-more/Styling/learnmore.css
+    font-size: 1.2rem;
+    top: 480px;
+========
+    font-size: 5px;
+    top: 350px;
+  }
+  body .container {
+    flex-direction: column;
+  }
+  body .why-is-container {
+    height: 500px;
+    padding: 20px;
+>>>>>>>> refs/remotes/origin/zari-branch:Learn-More/Styling/learnmore.css
+  }
+  body .description {
+    left: 30px;
+  }
+  body .description h2 {
+    font-size: 35px;
+  }
+  body .description .paragraph {
+    font-size: 18px;
+  }
+  body .statistics-box {
+    grid-template-columns: 500px;
+    gap: 30px;
+  }
+  body .statistics-box .images {
+    height: 250px;
+    width: 400px;
+  }
+  body .beach-api .beach {
+    font-size: 20px;
+  }
+  body .beach-api .input-container {
+    flex-direction: column;
+  }
+  body .beach-api .input-container #input {
+    width: 80%;
+    margin-right: 0;
+  }
+  body .beach-api .input-container #button {
+    width: 80%;
+  }
+  body .answer-container {
+    width: 80%;
+    margin: 3rem auto;
+  }
+  body .title {
+    font-size: 2.5rem;
+  }
+}
+body .collapsible {
+  width: 70vw;
+}/*# sourceMappingURL=learnmore.css.map */

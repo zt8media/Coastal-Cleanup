@@ -1,128 +1,5 @@
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #EEEDE7;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-#event-header{
-   
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    font-size: 3rem;
-    text-align: center;
-}
-#calendar {
-    flex: 1 1 60%;
-    margin-right: 20px;
-}
-
-#event-form-container {
-    flex: 1 1 35%;
-    display: flex;
-    flex-direction: column;
-}
-#eventForm{
-    font-weight: 800;
-
-}
-#submit-event{
- 
-    display: flex;
-    justify-content: center;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input, textarea {
-    width: 95%;
-    padding: 13px;
-    margin-top: 5px;
-    font-weight: 600;
-    border-radius: 5px;
-    border: none;
-      outline: none;
-      box-shadow: none;
-}
-
-.button-event {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #81C3D7;
-    border: none;
-    cursor: pointer;
-}
-
-.button-event:hover {
-    background-color:#88cee3;
-}
-
-#map {
-    margin-top: 20px;
-    height: 400px;
-    width: 100%;
-}
-.fc-toolbar-title{
-font-size: 1rem;
-}
-.fc-button-group .fc-button  {
-    background-color: #81C3D7; /* Change button background color */
-    color: white; /* Change button text color */}
-    .fc-button-group .fc-button:hover {
-        background-color: #81C3D7; /* Change button background color on hover */
-    }
-
-.fc-dayGridMonth-button{
-    background-color:#81C3D7;
-}
-.fc-today-buttonf.c-button .fc-button-primary{
-    background-color: #81C3D7;
-}
-
-
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    #calendar, #event-form-container {
-        flex: 1 1 100%;
-        margin-right: 0;
-    }
-    .fc-toolbar-title{
-        font-size: 10px;
-        }
-    
-    #event-header{
-            justify-content: left;
-            text-align: left;
-        }
-    
-    
-    
-    
-    }
-
-/* #5694BA sky blue: #81C3D7 tea green: #C8D5B9 white: #FFFFFF  background #EEEDE7   color of log #19447D */
-
 
 /* Nav bar styling */
-
-body {
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    padding-top: 20px; /* Space for fixed navbar */
-}
-
 .navbar {
     background-color: #EEEDE7;
     display: flex;
@@ -272,7 +149,7 @@ body {
 
 /* DELETE MODAL  */
 
-.modal {
+main .modal {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -285,7 +162,7 @@ body {
     background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-button {
+main .modal-button {
     padding: 10px;
     margin: 10px;
     cursor: pointer;
@@ -454,9 +331,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    /* .footer {
-        padding: 100px;
-    } */
     .footer-logo img {
         height: 40px;
     }
@@ -477,3 +351,5 @@ footer p {
         font-size: 14px;
     }
 }
+
+
