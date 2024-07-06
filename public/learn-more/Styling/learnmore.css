@@ -21,7 +21,6 @@ body .image-background h1 {
   font-size: 100px;
   font-family: "Bungee", sans-serif;
   position: relative;
-  top: 520px;
   left: 50px;
   transition: 0.5s ease;
   animation: fadeInLeft;
