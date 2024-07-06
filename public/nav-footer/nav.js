@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var navLinks = document.querySelector('.nav-links');
 
     function checkCookie() {
-        console.log(document.cookie);
         if (document.cookie) {
             loginBtn.innerHTML = 'Signout';
         }
@@ -50,24 +49,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function deleteAllCookies() {
-        document.cookie.split(';').forEach(cookie => {
-            const eqPos = cookie.indexOf('=');
-            const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
-            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        });
-    }
-    
     checkCookie();
 
     // Show modal
     loginBtn.addEventListener('click', function() {
-        console.log('login button clicked');
-        if (document.cookie) {
+        if (document.cookie.split(';').find(e => e.includes('signIn'))) {
             fetch('/logout')
                 .then(response => {
                     if (response.status === 200) {
-                        deleteAllCookies();  
+                        document.cookie = "signIn=; max-age=0";
                         checkCookie();                      
                     }
                     else {
