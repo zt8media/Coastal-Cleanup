@@ -5,6 +5,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.10.2",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "sequelize": "^6.37.3"
   }
 }
