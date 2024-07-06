@@ -20,7 +20,7 @@ document.getElementById('button').addEventListener('click', () => {
         } else if (data.weather[0].main === 'Rain') {
             weatherCondition = 'It\'s a bad time to go to the beach (it\'s raining)!';
         } else {
-            weatherCondition = 'It\'s not the perfect weather to go to the beach.';
+            weatherCondition = 'It\'s HOT wear sunscreen and protect yourself from the HEAT!';
         }
 
         const weatherInfo = `
