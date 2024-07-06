@@ -1,5 +1,6 @@
 body {
     font-family: "Roboto", sans-serif;
+    background-color: #EEEDE7;
 }
 
 .container {
@@ -118,7 +119,6 @@ font-size: 1rem;
 /* Nav bar styling */
 
 body {
-    margin: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
     padding-top: 20px; /* Space for fixed navbar */
 }
@@ -370,7 +370,7 @@ body {
 /* Footer styling */
 .footer {
     background-color:  #5694BA; /* Navy color */
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     color: #EEEDE7; /* White color for text */
@@ -454,6 +454,9 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    /* .footer {
+        padding: 100px;
+    } */
     .footer-logo img {
         height: 40px;
     }
