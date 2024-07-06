@@ -75,21 +75,13 @@ main h1 {
   color: #5694BA;
   font-size: 57px;
 }
-main .who-are-we {
+main .who-are-we, main .our-mission {
   display: grid;
-  grid-template-columns: repeat(2, 60%);
-  grid-template-rows: repeat(2, 50%);
-  flex-direction: row;
-  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 10% 0;
 }
-main .who-are-we .who-section {
-  margin: 5% 15%;
-  grid-area: 1/1/2/2;
-}
-main .who-are-we .who-section #who-pic {
-  grid-area: 1/1/2/2;
-}
-main .who-are-we .who-section .button-home {
+main .button-home {
   font-size: 15px;
   width: 100%;
   height: 40px;
@@ -116,15 +108,15 @@ main .who-are-we .who-section .button-home {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
-main .who-are-we .who-section .button-home:hover {
+main .button-home:hover {
   background-color: white;
   color: black;
   outline: 0;
 }
-main .who-are-we .who-section .button-home:active {
+main .button-home:active {
   transform: scale(0.9);
 }
-main .who-are-we .who-section .button-home span {
+main .button-home span {
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
@@ -133,35 +125,22 @@ main .who-are-we .who-section .button-home span {
   transition: 300ms;
   text-decoration: none;
 }
-main .who-are-we .who-section .button-home:hover span {
+main .button-home:hover span {
   background: none;
   text-decoration: none;
 }
-main .who-are-we .who-section .button-home {
+main .button-home {
   margin: 3% 0%;
   width: 40%;
 }
-main .who-are-we img {
+
+#who-pic {
   border-radius: 20px;
   width: 50vh;
   height: 70vh;
 }
-main .our-mission {
-  display: grid;
-  grid-template-columns: repeat(2, 60%);
-  grid-template-rows: repeat(2, 50%);
-  text-align: left;
-  margin: 2% 0;
-  margin-top: 30vw;
-}
-main .our-mission #mission-pic {
-  grid-area: 1/1/2/2;
-}
-main .our-mission .mission-section {
-  margin: 5% 15%;
-  grid-area: 1/2/2/3;
-}
-main .our-mission img {
+
+#mission-pic {
   width: 55%;
   height: 60vh;
   border-radius: 20px;
@@ -193,18 +172,6 @@ p {
 .button-home {
   position: relative;
   margin: 0 auto;
-}
-
-.company-photos {
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-  justify-content: space-between;
-}
-.company-photos img {
-  width: 20%;
-  height: 20%;
-  margin: 100px;
 }
 
 /* card slider css*/
@@ -325,5 +292,10 @@ p {
   .name, .job {
     color: white;
     width: 100vmin;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .who-are-we, .our-mission {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -8,6 +8,10 @@ $paragraph: #81C3D7;
 $button: #81C3D7;
 $background: #EEEDE7;
 
+html {
+    background-color: $background;
+}
+
 
 // this mixin is for roboto text regular
 @mixin roboto-regular {
@@ -130,19 +134,50 @@ header {
     
 }
 
+
+
+main {
+
+    //this puts spacing around the main section
+    .bulk {
+        margin: 10%;
+
+    }
+
     #hero-video {
         width: 100%;
         height: 100%;
     }
 
-main {
 
-    .bulk {
-        margin: 15% 15%;
-
-
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-top: -20%;
+        letter-spacing: 10px;
+        @include bungee();
+        padding-left: 20px;
+        width: 70%;
     }
 
+    #hero-header {
+        color: $header;
+        font-size: 60px;
+        font-weight: bolder;
+        text-shadow: 3px 5px 2px rgba(247, 238, 238, 0.7764705882), -3px 2px 12px rgba(64, 116, 181, 0.79);
+        border-radius: 0px 20px 0px 0px;
+        
+    }
+
+    #hero-paragraph {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 3px 5px 2px $header, -3px 2px 12px rgba(64, 116, 181, 0.79);
+        border-radius: 0px 0px 20px 0px;
+    }
 
     h1 {
         @include bungee();
@@ -154,71 +189,30 @@ main {
 
 
     // this is the who are we section with text and photos
-    .who-are-we {
-        display: grid;
-        grid-template-columns: repeat(2, 60%);
-        grid-template-rows: repeat(2, 50%);
-        flex-direction: row;
-        text-align: left;
-        
-
-        .who-section {
-        margin: 5% 15%;
-        grid-area: 1 / 1 / 2 / 2;
-
-        #who-pic {
-            grid-area: 1 / 1 / 2 / 2;
+        .who-are-we, .our-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 10% 0;
         }
 
  
     // For the learn more button
     @include buttonStyle();
-
-    // For the learn more button
-        button {
-            margin: 3% 0%;
-            width: 40%;
-        }
-    } 
     
-    // this is for the who are we image
-        img {
+        // this is for the who are we image
+        #who-pic, #mission-pic {
             @include imageBorderRadius();
-            width: 50vh;
-            height: 70vh;
+            width: 100%;
+            height: auto;
+            // border-radius: 20px;
             
         }
-    }
+
+    } 
+    
 
 
-    // this is the our mission section
-.our-mission {
-        display: grid;
-        grid-template-columns: repeat(2, 60%);
-        grid-template-rows: repeat(2, 50%);
-        @include leftAlign();
-        margin-top: 30vw;
-
-        #mission-pic {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-        .mission-section {
-            margin: 5% 15%;
-            grid-area: 1 / 2 / 2 / 3;
-            // @include leftAlign();
-        }
-
-  
-// this is the our mission image
-    img {
-        @include imageSize();
-        @include imageBorderRadius();
-        width: 60vh;
-        height: 40vh;
-    }
-}
-    }
     
 
 
@@ -244,19 +238,6 @@ main {
         margin: 0 auto;
     }
 
-
-    
-
-    
-    // below are the company photo stylings
-.company-photos {
-    @include navFlexCenter();
-    img {
-        width: 20%;
-        height: 20%;
-        margin: 100px;
-    }
-}
 
 
 /* card slider css*/
@@ -514,7 +495,7 @@ footer {
 }
 
 
-}
+
 
 //  Code for submit validation.//
 .red-border {
@@ -654,72 +635,21 @@ footer {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1214px) {
-    // this is the who are we section with text and photos
-   main .who-are-we {
-        display: grid;
-        grid-template-columns: repeat(1, 100%);
-        grid-template-rows: repeat(2, 100%);
-        flex-direction: row;
-        text-align: left;
-        
-
-      main  .who-section {
-        margin: 5% 15%;
-        grid-area: 2 / 1 / 3 / 2;
-
-       main  #who-pic {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
- 
-    // For the learn more button
-    @include buttonStyle();
-
-    // For the learn more button
-        button {
-            margin: 3% 0%;
-            width: 40%;
-        }
-    } 
+// this puts the sections in a column
+@media only screen and (max-width: 768px) {
+    main .who-are-we, main .our-mission {
+        grid-template-columns: 1fr;
+    }
     
-    // this is for the who are we image
-        img {
-            @include imageBorderRadius();
-            width: 20vh;
-            height: 40vh;
-            
-        }
-    }
-
-    main .our-mission {
-        display: grid;
-        grid-template-columns: repeat(2, 60%);
-        grid-template-rows: repeat(2, 50%);
-        @include leftAlign();
-        margin-top: 30vw;
-
-       main #mission-pic {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-
-       main .mission-section {
-            margin: 5% 15%;
-            grid-area: 1 / 2 / 2 / 3;
-            // @include leftAlign();
-        }
-
-  
-// this is the our mission image
-    main img {
-        @include imageSize();
-        @include imageBorderRadius();
-        width: 60vh;
-        height: 40vh;
-    }
 }
 
+@media only screen and (max-width: 425px) {
+    html h1, h2 {
+        font-size: 40px;
+    }
+
+    main .who-are-we p, main .our-mission p {
+        font-size: 20px;
+    }
 }
-
-
 
