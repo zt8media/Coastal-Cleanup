@@ -1,4 +1,3 @@
-
 //NAV BAR START 
 
 
@@ -40,25 +39,33 @@ document.addEventListener("DOMContentLoaded", function() {
     var signUpForm = document.getElementById('signUp-form');
     var navLinks = document.querySelector('.nav-links');
 
-    function checkCookie() {
-        if (document.cookie) {
-            loginBtn.innerHTML = 'Signout';
-        }
-        else {
-            loginBtn.innerHTML = 'Login';
+    // Cookie object
+    const cookie = {
+        exists: function(name) {
+            if (document.cookie.split(';').find(e => e.includes(name)))
+                return true;
+            else
+                return false
+        },
+        check: function() {
+            if (this.exists('token')) {
+                loginBtn.innerHTML = 'Signout';
+            }
+            else {
+                loginBtn.innerHTML = 'Login';
+            }
         }
     }
-
-    checkCookie();
+    
+    cookie.check();
 
     // Show modal
     loginBtn.addEventListener('click', function() {
-        if (document.cookie.split(';').find(e => e.includes('signIn'))) {
+        if (cookie.exists('token')) {
             fetch('/logout')
                 .then(response => {
                     if (response.status === 200) {
-                        document.cookie = "signIn=; max-age=0";
-                        checkCookie();                      
+                        cookie.check();                      
                     }
                     else {
                         alert('Error logging out');
@@ -67,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else {
             loginModal.style.display = "block";
-            checkCookie();
+            cookie.check();
         }
     });
 
@@ -213,8 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     return;
                 }
                 loginModal.style.display = "none";
-                document.cookie = 'signIn=true';
-                checkCookie();
+                cookie.check();
             })
             .catch(error => console.error(error));
     });
@@ -250,8 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     return;
                 }
                 loginModal.style.display = "none";
-                document.cookie = 'signIn=true';
-                checkCookie();
+                cookie.check();
             })
             .catch(error => console.error(error));
     });

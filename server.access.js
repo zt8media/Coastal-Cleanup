@@ -39,7 +39,7 @@ const access = {
                             process.env.SECRET_KEY,  
                             { expiresIn: '1h' }
                         );
-                        res.cookie('token', token, { httpOnly: true });
+                        res.cookie('token', token, { httpOnly: false, secure: true});
                         res.json({ token, user, admin });
                     } else {
                         res.status(401).json({message: 'Invalid username or password'});
@@ -90,7 +90,7 @@ const access = {
                                         process.env.SECRET_KEY,  
                                         { expiresIn: '1h' }
                                     );
-                                    res.cookie('token', token, { httpOnly: true });
+                                    res.cookie('token', token, { httpOnly: false, secure: true});
                                     res.json({ token, user, admin });
                                     } else {
                                         res.status(500).json({ message: 'Internal server error' });
@@ -203,7 +203,7 @@ const access = {
 
     // Get Que by ID endpoint
     getQueById: (req, res) => {
-        const id = req.params.id;
+        const id = req.query.id;
         connection.query(
             `call getContactById('${id}')`,
             (err, results) => {

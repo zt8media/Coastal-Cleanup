@@ -1,11 +1,6 @@
 const express = require('express');
-const mysql = require('mysql2');
-const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const path = require('path');
-
-const fs = require('fs');
-
 require('dotenv').config();
 
 const access = require('./server.access');
@@ -23,6 +18,9 @@ app.get('/', (req, res) => res.redirect('/home'));
 
 // to serve static files
 app.use(express.static('public'));
+
+//to server static pictures...
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // to parse URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
@@ -56,7 +54,7 @@ app.get('/events', (req, res) => {
 // Que routes
 app.post('/addQue', access.addQue);
 
-app.get('/getQue', access.getQue);
+app.get('/getQue', access.verifyAdmin, access.getQue);
 
 app.get('/getQueById', access.getQueById);
 
