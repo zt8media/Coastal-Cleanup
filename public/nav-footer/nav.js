@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Show modal
     loginBtn.addEventListener('click', function() {
         if (cookie.exists('token')) {
-            fetch('/logout')
+            fetch('/api/logout')
                 .then(response => {
                     if (response.status === 200) {
                         cookie.check();                      
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 password: login_password.value
             })
         };
-        fetch(`/login`, options)
+        fetch(`/api/login`, options)
             .then(response => {
                 if (response.status === 401) {
                     alert('Invalid username or password');
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 password: signUp_password.value
             })
         };
-        fetch(`/signup`, options)
+        fetch(`/api/signup`, options)
             .then(response => {
                 if (response.status === 409) {
                     alert('Username already exists');

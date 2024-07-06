@@ -173,7 +173,7 @@ const access = {
 
     // Delete Que endpoint
     deleteQue: (req, res) => {
-        const id = req.body.id;
+        const id = req.params.id;
         connection.query(
             `call deleteContact('${id}')`,
             (err, results) => {
@@ -203,7 +203,8 @@ const access = {
 
     // Get Que by ID endpoint
     getQueById: (req, res) => {
-        const id = req.query.id;
+        const id = req.params.id;
+        console.log(id);
         connection.query(
             `call getContactById('${id}')`,
             (err, results) => {

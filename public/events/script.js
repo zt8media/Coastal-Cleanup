@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             left: 'dayGridMonth,dayGridWeek'
         },
         editable: true,
-        events: '/events',
+        events: '/api/events',
         eventClick: function(info) {
             var deleteModal = document.getElementById('deleteModal');
             deleteModal.style.display = 'block';
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Saves a new event to the server
     async function saveEvent(eventData) {
         try {
-            const response = await fetch('/events', {
+            const response = await fetch('/api/events', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Deletes an event from the server
     async function deleteEvent(eventId) {
         try {
-            const response = await fetch(`/events/${eventId}`, {
+            const response = await fetch(`/api/events/${eventId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             console.log('Submitting form data:', formData);
-            const response = await fetch('/events', {
+            const response = await fetch('/api/events', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
