@@ -75,9 +75,15 @@ html {
 main .bulk {
   margin: 20%;
 }
+main img {
+  max-width: 100%;
+}
 main #hero-video {
   width: 100%;
   height: 100%;
+}
+main .mission-title {
+  font-size: 70px;
 }
 main .hero-container {
   display: flex;
@@ -136,15 +142,17 @@ main #title h2 {
 main .who-are-we, main .our-mission {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 200px;
+  gap: 150px;
   margin-top: 20%;
 }
 main .who-section h1, main #who-paragraph, main #learn-more-button {
   margin-top: 5%;
 }
 main .who-section {
-  margin-left: -50%;
+  display: flex;
+  flex-direction: column;
   margin-top: 20%;
+  align-items: center;
 }
 main main #misson-title {
   font-size: 400px;
@@ -195,6 +203,9 @@ main button:hover span {
   background: none;
   text-decoration: none;
 }
+main #who-title {
+  font-size: 75px;
+}
 main #who-pic, main #mission-pic {
   border-radius: 20px;
   width: 55vh;
@@ -202,6 +213,20 @@ main #who-pic, main #mission-pic {
 }
 main #cleanup-title {
   text-align: center;
+}
+main .mission-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+main .mission-section p {
+  text-align: center;
+  font-size: 40px;
+}
+main .mission-section h1 {
+  text-align: center;
+  font-size: 55px;
 }
 
 p {
@@ -235,10 +260,14 @@ button {
 }
 
 .learn-btn {
-  height: 15%;
-  width: 70%;
+  width: 50%;
   font-size: 25px;
   margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /* card slider css*/
@@ -407,6 +436,9 @@ main .job-done {
   main #title-staff {
     font-size: 35px;
   }
+  #who-paragraph {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 425px) {
   main #hero-header {
@@ -421,23 +453,33 @@ main .job-done {
   main #title h2 {
     font-size: 35px;
   }
+  main #cleanup-title {
+    font-size: 30px;
+  }
   main .who-are-we h1 {
     font-size: 35px;
-    margin-left: 45%;
+    text-align: center;
+  }
+  .mission-section h1 {
+    text-align: center;
+    font-size: 30px;
   }
   #who-paragraph {
-    font-size: 30px;
-    margin-left: 40%;
-  }
-  .learn-btn {
-    height: 100px;
-    width: 30%;
-    margin-left: 45%;
+    font-size: 20px;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
   }
   main .who-are-we p, main .our-mission p {
     font-size: 20px;
   }
   main #mission-title {
+    font-size: 50px;
+  }
+  main #m-p {
+    font-size: 20px;
+  }
+  main #who-title {
     font-size: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
