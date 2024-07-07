@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/home/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="navbar-styles/navbar.scss">
+    <link rel="stylesheet" href="navbar-styles/navbar.css">
     <link rel="stylesheet" href="/public/nav-footer/nav-footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +33,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="/home" class="nav-item" id="home">Home</a></li>
-            <li><a href="/learn-more" class="nav-item" id="about">Learn more</a></li>
+            <li><a href="/learn-more" class="nav-item" id="about">Learn More</a></li>
             <li><a href="/events" class="nav-item" id="events">Events</a></li>
             <li><a href="/contact" class="nav-item" id="contact">Contact</a></li>
             <li><button  class="nav-item" id="login-btn">Login</button></li>
@@ -137,6 +137,7 @@
               <div class="content">
                <img src="/public/home/beach-cleanup-photos/pexels-kirill-ozerov-109766512-9620528.jpg" alt="beach-cleanup-photo" class="headshot">
                <div class="profile-details">
+                <p class="job-done">Virgina Beach</p>
                </div>
               </div>
              </li>
@@ -144,6 +145,7 @@
               <div class="content">
                <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037204.jpg" alt="beach-cleanup-photo" class="headshot">
                <div class="profile-details">
+                <p class="job-done">Wilmington Beach</p>
                </div>
               </div>
              </li>
@@ -151,34 +153,15 @@
               <div class="content">
                <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9034659.jpg" alt="beach-cleanup-photo" class="headshot">
                <div class="profile-details">
+                <p class="job-done">Santa Monica Beach</p>
                </div>
               </div>
              </li>
-             <li class="item-cleanup">
-              <div class="content">
-               <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037218.jpg" alt="beach-cleanup-photo" class="headshot">
-               <div class="profile-details"
-               </div>
-              </div>
-             </li>
-             <li class="item-cleanup">
-              <div class="content">
-               <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037597.jpg" alt="beach-cleanup-photo" class="headshot">
-               <div class="profile-details"
-               </div>
-              </div>
-             </li>
-             <li class="item-cleanup">
-                <div class="content">
-                 <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9034682.jpg" alt="beach-cleanup-photo" class="headshot">
-                 <div class="profile-details"
-                 </div>
-                </div>
-               </li>
                <li class="item-cleanup">
                 <div class="content">
                  <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9034672.jpg" alt="beach-cleanup-photo" class="headshot">
                  <div class="profile-details">
+                    <p class="job-done">Miami Beach</p>
                  </div>
                 </div>
                </li>
@@ -186,6 +169,7 @@
                 <div class="content">
                  <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037213.jpg" alt="beach-cleanup-photo" class="headshot">
                  <div class="profile-details">
+                    <p class="job-done">Carolina Beach</p>
                  </div>
                 </div>
                </li>
@@ -193,6 +177,7 @@
                 <div class="content">
                  <img src="/public/home/beach-cleanup-photos/pexels-ron-lach-9037209.jpg" alt="beach-cleanup-photo" class="headshot">
                  <div class="profile-details">
+                  <p class="job-done">Myrtle Beach</p>
                  </div>
                 </div>
                </li>
@@ -258,7 +243,7 @@
              </li>
             </ul>
             <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
-              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+              <i  class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
             </button>
             <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
               <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
@@ -308,6 +293,7 @@ direction === "previous" ?   list.scrollBy({ left: -itemWidth, behavior: "smooth
 }
     </script>
     <script src="script.js"></script>
+    <script src="/nav-footer/nav.js"></script>
     
 </body>
 </html>

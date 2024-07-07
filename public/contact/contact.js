@@ -87,7 +87,7 @@ form.addEventListener("submit", function(e) {
                 comment: comment.value
             })
         };
-        fetch(`/addQue`, options)
+        fetch(`/api/addQue`, options)
     .then(response => response.json())
     .then(data => {
         console.log(data);

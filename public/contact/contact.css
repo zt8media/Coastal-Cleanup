@@ -9,6 +9,7 @@ body {
 
 .contact-text-body {
     font-family: "Bungee", sans-serif;
+    color: #19447D;
 }
 
 .form-font {
@@ -40,7 +41,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #000;
+    color:#19447D;
     overflow: hidden; 
 }
 
@@ -58,7 +59,7 @@ body {
 }
 
 .banner {
-    width: 500px;
+    width: 50%;
     position: relative;
     bottom: 60px;
     background-color: #81c3d7;
@@ -234,7 +235,7 @@ button:hover span {
 }
 
 /* For tablets (portrait and landscape) */
-@media (min-width: 600px) and (max-width: 1024px) {
+@media  (max-width: 768px) {
     /* Your tablet-specific styles go here */
     .container {
         width: 80%;
@@ -244,6 +245,7 @@ button:hover span {
     .banner {
         width: 90%;
         padding: 15px;
+        height: auto;
     }
 
     .formc input {
@@ -262,6 +264,7 @@ button:hover span {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 15px;
     }
     
     .office {
@@ -272,10 +275,16 @@ button:hover span {
 
     .contact-text-body {
         justify-content: center;
+       
     }
 
     .form {
         flex-direction: column;
+    }
+    
+    .contact-text {
+        font-size: 2em;
+        
     }
 }
  
