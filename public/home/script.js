@@ -194,3 +194,4 @@ document.addEventListener("DOMContentLoaded", function() {
         loginForm.classList.remove('hide');
     });
 });
+

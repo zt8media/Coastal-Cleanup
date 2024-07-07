@@ -181,11 +181,12 @@
                 </div>
                </li>
             </ul>
-            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
-              <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
-            </button>
-            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
+        </ul>
+        <button onclick="handleClick('previous', 'cleanup-list')" id="button--previous-cleanup" type="button">
+            <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+        </button>
+        <button onclick="handleClick('next', 'cleanup-list')" id="button--next-cleanup" type="button">
+            <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
             </button>
         </div>
 
@@ -241,12 +242,12 @@
               </div>
              </li>
             </ul>
-            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="imageof”>
-              <i  class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
+            <!-- <button onclick="handleClick('previous', 'staff-list')" id="button--previous-staff" type="button">
+                <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9DA993;"></i>
             </button>
-            <button onclick="handleClick('next')" id="button--next" type="button" alt="imageof">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
-            </button>
+            <button onclick="handleClick('next', 'staff-list')" id="button--next-staff" type="button">
+                <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9DA993;"></i>
+            </button> -->
         </div>
 
     </main>
@@ -279,8 +280,8 @@
 </footer>
 
 <!-- footer end  -->
-
-    <script>
+<script>
+  
         const list = document.querySelector(".list");
 //creating a function that based on the starting width of the arrow icon it will either scroll smoothly to the left or the right
 function handleClick(direction) {
@@ -290,7 +291,10 @@ function handleClick(direction) {
  // Based on the direction we call `scrollBy` with the item width we got earlier
 direction === "previous" ?   list.scrollBy({ left: -itemWidth, behavior: "smooth" }) :   list.scrollBy({ left: itemWidth, behavior: "smooth" });
 }
-    </script>
+</script>
+
+    
+    
     <script src="script.js"></script>
     <script src="/nav-footer/nav.js"></script>
     

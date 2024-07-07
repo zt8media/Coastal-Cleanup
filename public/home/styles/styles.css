@@ -7,6 +7,44 @@ html {
   background-color: #EEEDE7;
 }
 
+.list-wrapper {
+  position: relative;
+  margin-top: 5%;
+  overflow: hidden;
+}
+.list-wrapper #button--previous-cleanup, .list-wrapper #button--previous-staff {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #81C3D7;
+  font-size: 2em;
+  left: 10px;
+}
+.list-wrapper #button--previous-cleanup:hover, .list-wrapper #button--previous-staff:hover {
+  color: #47a7c5;
+}
+.list-wrapper #button--next-cleanup, .list-wrapper #button--next-staff {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #81C3D7;
+  font-size: 2em;
+  right: 10px;
+}
+.list-wrapper #button--next-cleanup:hover, .list-wrapper #button--next-staff:hover {
+  color: #47a7c5;
+}
+
+.list {
+  padding: 0 40px;
+}
+
 #login-submit, .switch-form-button {
   width: 100%;
   height: 40px;
@@ -219,7 +257,18 @@ button {
   animation-duration: 4s;
 }
 
-.item {
+.list-staff {
+  display: flex;
+  padding: 10px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  animation: fadeInLeft;
+  animation-duration: 4s;
+}
+
+.item, .item-staff {
   width: 100%;
   padding: 0 60px;
 }

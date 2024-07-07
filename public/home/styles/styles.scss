@@ -11,6 +11,44 @@ $background: #EEEDE7;
 html {
     background-color: $background;
 }
+@mixin carouselButtonStyle {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: $button; 
+    font-size: 2em;
+
+    &:hover {
+        color: darken($button, 15%);
+    }
+}
+
+// Apply carousel button styles
+.list-wrapper {
+    position: relative;
+    margin-top: 5%;
+    overflow: hidden; 
+
+    // Buttons
+    #button--previous-cleanup, #button--previous-staff {
+        @include carouselButtonStyle;
+        left: 10px; 
+    }
+
+    #button--next-cleanup, #button--next-staff {
+        @include carouselButtonStyle;
+        right: 10px; 
+    }
+}
+
+
+.list {
+    padding: 0 40px; 
+}
+
 
 
 // this mixin is for roboto text regular
@@ -315,7 +353,18 @@ main {
     animation: fadeInLeft;
     animation-duration: 4s;
    }
-   .item {
+
+   .list-staff{
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    animation: fadeInLeft;
+    animation-duration: 4s;
+   }
+   .item, .item-staff {
     width:100%;
     padding: 0 60px;
    }
