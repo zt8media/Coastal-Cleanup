@@ -1,37 +1,4 @@
 
-
-//NAV BAR START 
-
-
-// Handles navbar responsiveness
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open'); // Toggle the side menu
-    });
-});
-
-
-
-// Sets the active link based on the current page
-document.addEventListener("DOMContentLoaded", function() {
-    const currentLocation = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('.nav-links .nav-item');
-
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentLocation) {
-            link.classList.add('active');
-        }
-    });
-});
-
-
-//NAV BAR END 
-
-
-
 // log in information 
 document.addEventListener("DOMContentLoaded", function() {
     var loginBtn = document.getElementById('login-btn');

@@ -31,10 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
 // log in information 
 document.addEventListener("DOMContentLoaded", function() {
     var loginBtn = document.getElementById('login-btn');
