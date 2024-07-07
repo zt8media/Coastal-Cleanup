@@ -95,7 +95,7 @@ input, textarea {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     margin-top: 10px;
-    font-size: 28px;
+    /* font-size: 28px; */
 }
 
 .button-event:hover {
@@ -187,7 +187,7 @@ body {
 }
 
 .logo span {
-    color: #19447D;
+    color:  #5694BA;
     margin-left: 10px;
     font-size: 24px;
     font-family: "Bungee", sans-serif;
