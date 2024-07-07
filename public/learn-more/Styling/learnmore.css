@@ -97,7 +97,15 @@ body .statistics-box .statistics-grid {
   font-size: 15px;
   text-align: center;
   font-family: "Roboto", sans-serif;
+  line-height: 35px;
   padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+body .statistics-box .statistics-grid:hover {
+  transform: scale(1.09); /* Slightly enlarges the box */
+  box-shadow: 0 4px 8px rgba(158, 158, 158, 0.325); /* Adds shadow for depth */
 }
 body .beach-api .beach {
   display: flex;
@@ -131,6 +139,7 @@ body .beach-api .input-container #button {
   padding-bottom: 17px;
   font-size: 17px;
   color: #fff;
+  margin-top: 4px;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   cursor: pointer;
@@ -212,7 +221,6 @@ body .collapsible input[type=radio]:checked + label::before {
   content: "-";
 }
 body label::before {
-  content: "+";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
@@ -317,25 +325,28 @@ body input[type=radio] {
   }
   body .beach-api .beach {
     font-size: 20px;
+    text-align: center;
   }
   body .beach-api .input-container {
     flex-direction: column;
+    gap: 20p;
   }
-  body .beach-api .input-container #input {
+  body .beach-api #input {
     width: 80%;
     margin-right: 0;
   }
-  body .beach-api .input-container #button {
+  body .beach-api #button {
     width: 80%;
-  }
-  body .answer-container {
-    width: 80%;
-    margin: 3rem auto;
-  }
-  body .title {
-    font-size: 2.5rem;
   }
 }
-body .collapsible {
+body .answer-container {
+  width: 80%;
+  margin: 3rem auto;
+}
+body .title {
+  font-size: 2.5rem;
+}
+
+.collapsible {
   width: 70vw;
 }/*# sourceMappingURL=learnmore.css.map */

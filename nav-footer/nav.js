@@ -1,4 +1,4 @@
-
+console.log("linked")
 //NAV BAR START 
 
 

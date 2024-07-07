@@ -86,6 +86,7 @@ body {
       grid-template-columns: repeat(3, 480px);
       gap: 40px;
       justify-content: center;
+     
       .images {
             height: 267px;
             width: 400px;
@@ -104,9 +105,21 @@ body {
             font-size: 15px;
             text-align: center;
             font-family: $second-font;
+            line-height: 35px;
             padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; 
+         margin-bottom: 100px;
         }
-    }
+   
+      
+      
+      .statistics-grid:hover {
+          transform: scale(1.09); /* Slightly enlarges the box */
+          box-shadow: 0 4px 8px rgba(158, 158, 158, 0.325); /* Adds shadow for depth */
+      }
+   
+      }
     .beach-api {
         .beach {
             display: flex;
@@ -139,6 +152,7 @@ body {
                 padding-bottom: 17px;
                 font-size: 17px;
                 color: #fff;
+                margin-top:4px;
                 border-top-right-radius: .5em;
                 border-bottom-right-radius: .5em;
                 cursor: pointer;
@@ -223,7 +237,6 @@ body {
         }
     }
     label::before {
-        content: '+';
         margin-right: 10px;
         font-size: 24px;
         font-weight: 600;
@@ -347,9 +360,13 @@ body {
   .beach-api {
     .beach {
       font-size: 20px;
+      text-align: center;
     }
     .input-container {
       flex-direction: column;
+      gap: 20p;
+    
+    }
       #input {
         width: 80%;
         margin-right: 0;
@@ -370,4 +387,4 @@ body {
 .collapsible {
   width: 70vw;
 }
-}
+

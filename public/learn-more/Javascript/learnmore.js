@@ -37,3 +37,28 @@ document.getElementById('button').addEventListener('click', () => {
         console.error("Error fetching weather data:", error);
     });
 });
+
+// Handles navbar responsiveness
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open'); // Toggle the side menu
+    });
+});
+
+// Sets the active link based on the current page
+document.addEventListener("DOMContentLoaded", function() {
+    const currentLocation = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links .nav-item');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentLocation) {
+            link.classList.add('active');
+        }
+    });
+});
+
+
+//NAV BAR END 
