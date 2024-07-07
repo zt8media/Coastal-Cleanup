@@ -423,8 +423,21 @@ main .job-done {
   }
   main .who-are-we h1 {
     font-size: 35px;
+    margin-left: 45%;
+  }
+  #who-paragraph {
+    font-size: 30px;
+    margin-left: 40%;
+  }
+  .learn-btn {
+    height: 100px;
+    width: 30%;
+    margin-left: 45%;
   }
   main .who-are-we p, main .our-mission p {
     font-size: 20px;
+  }
+  main #mission-title {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
