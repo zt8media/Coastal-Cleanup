@@ -44,7 +44,7 @@ body {
     }
     .cont{
       display: flex;
-      margin-top: 30px;
+      margin-top: 150px;
     
      .why-is-container{
         height: 600px;
@@ -59,7 +59,7 @@ body {
         }
     }
     .description {
-        width: 70vmin;
+        // width: 70vmin;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -83,20 +83,31 @@ body {
     }
     .statistics-box {
       display: grid;
-      grid-template-columns: repeat(3, 480px);
+      // grid-template-columns: repeat(3, 480px);
       gap: 40px;
       justify-content: center;
+      align-items: center;
+   
+    }
+
+  
+      
      
       .images {
             height: 267px;
             width: 400px;
             border-radius: 4px;
+            
         }
+        
         .stats-title {
             font-family: $first-font;
             font-size: 20px;
             color: $secondary-color;
+           
         }
+
+      
         .statistics-grid {
             border-radius: 8px;
             box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
@@ -109,13 +120,19 @@ body {
             padding: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer; 
-         margin-bottom: 100px;
+           margin-bottom: 100px;
+           max-width: 75%;
+           margin: 0 auto ;
+          
+         
         }
-   
+        .statistics-grid img {
+          max-width: 100%;
+        }
       
       
       .statistics-grid:hover {
-          transform: scale(1.09); /* Slightly enlarges the box */
+          transform: scale(1.06); /* Slightly enlarges the box */
           box-shadow: 0 4px 8px rgba(158, 158, 158, 0.325); /* Adds shadow for depth */
       }
    
@@ -134,8 +151,10 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+
             #input {
                 width: 800px;
+                max-width: 100%;
                 padding: 14px;
                 font-size: 17px;
                 color: black;
@@ -277,27 +296,31 @@ body {
     }
   }
 
-  .statistics-box {
+  main .statistics-box {
     grid-template-columns: 150px;
-    gap: 30px;
-    width: 120vw;
-    .images {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
       height: 250px;
-      width: 400px;
+      // width: 400px;
     }
   }
  
   .beach-api {
     .beach {
-      font-size: 18px;
+      font-size: 70px;
     }
     .input-container {
       #input {
-        width: 300px;
+        width: 800px;
         margin-right: 0;
+        max-width: 100%;
       }
       #button {
-        width: 80px;
+        width: 150px;
+         border-radius: .5rem;
+        //  margin-top: 30px;
+         
       }
     }
   }
@@ -322,24 +345,38 @@ body {
     .content {
       font-size: 14px;
     }
-  }
   
+  
+}
+  
+
+
+@media(min-width:480px)
+{
+  .description{
+width: 70vmin;
+  }
+  .statistics-box{
+    grid-template-columns: repeat(3, 1fr);
+   }
+
 }
 
 /* Tablets (min-width: 481px and max-width: 768px) */
 @media (max-width: 768px) {
-  .image-background {
+  body .image-background {
     // display: none;
     h1 {
       font-size: 3rem;
       top: 480px;
+      max-width: 600px
     }
     .header-text {
       font-size: 1.2rem;
       top: 480px;
+      max-width: 600px;
     }
   }
-  
   .description {
     left: 30px;
     h2 {
@@ -382,8 +419,9 @@ body {
   }
   .title {
     font-size: 2.5rem;
+    padding: 20px;
   }
-}
+
 .collapsible {
   width: 70vw;
 }

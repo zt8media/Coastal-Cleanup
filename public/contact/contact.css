@@ -258,6 +258,7 @@ button:hover span {
 
     .split-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .office-container {
