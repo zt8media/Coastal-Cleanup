@@ -6,8 +6,6 @@
 
 body {
   background: #EEEDE7;
-  /* Mobile devices (max-width: 480px) */
-  /* Tablets (min-width: 481px and max-width: 768px) */
 }
 body .image-background {
   background: url(/public/learn-more/Media/cropped-beach.jpg) top center no-repeat;
@@ -40,7 +38,7 @@ body .image-background .header-text {
 }
 body .cont {
   display: flex;
-  margin-top: 30px;
+  margin-top: 150px;
 }
 body .cont .why-is-container {
   height: 600px;
@@ -55,7 +53,6 @@ body .cont .why-is-container .why-is {
   animation-duration: 4s;
 }
 body .cont .description {
-  width: 70vmin;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -75,21 +72,21 @@ body .cont .description .paragraph {
 }
 body .statistics-box {
   display: grid;
-  grid-template-columns: repeat(3, 480px);
   gap: 40px;
   justify-content: center;
+  align-items: center;
 }
-body .statistics-box .images {
+body .images {
   height: 267px;
   width: 400px;
   border-radius: 4px;
 }
-body .statistics-box .stats-title {
+body .stats-title {
   font-family: "Bungee", sans-serif;
   font-size: 20px;
   color: #FFFFFF;
 }
-body .statistics-box .statistics-grid {
+body .statistics-grid {
   border-radius: 8px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   background-color: #19447D;
@@ -102,12 +99,18 @@ body .statistics-box .statistics-grid {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   margin-bottom: 100px;
+  max-width: 75%;
+  margin: 0 auto;
 }
-body .statistics-box .statistics-grid:hover {
-  transform: scale(1.09); /* Slightly enlarges the box */
+body .statistics-grid img {
+  max-width: 100%;
+}
+body .statistics-grid:hover {
+  transform: scale(1.06); /* Slightly enlarges the box */
   box-shadow: 0 4px 8px rgba(158, 158, 158, 0.325); /* Adds shadow for depth */
 }
-body .beach-api .beach {
+
+.beach-api .beach {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,13 +119,14 @@ body .beach-api .beach {
   font-family: "Bungee", sans-serif;
   padding: 20px;
 }
-body .beach-api .input-container {
+.beach-api .input-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .beach-api .input-container #input {
+.beach-api .input-container #input {
   width: 800px;
+  max-width: 100%;
   padding: 14px;
   font-size: 17px;
   color: black;
@@ -131,7 +135,7 @@ body .beach-api .input-container #input {
   border: 2px solid #fff;
   margin-right: -10px;
 }
-body .beach-api .input-container #button {
+.beach-api .input-container #button {
   border: none;
   background-color: #19447D;
   text-decoration: none;
@@ -144,7 +148,8 @@ body .beach-api .input-container #button {
   border-bottom-right-radius: 0.5em;
   cursor: pointer;
 }
-body .answer-container {
+
+.answer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,23 +161,24 @@ body .answer-container {
   border-radius: 8px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-body .answer-container .api-img-answer {
+.answer-container .api-img-answer {
   width: 100%;
   height: auto;
 }
-body .answer-container .api-header-answer {
+.answer-container .api-header-answer {
   color: #81C3D7;
   font-size: 1.5rem;
   font-family: "Bungee", sans-serif;
   margin-top: 1rem;
 }
-body .answer-container .api-text-answer {
+.answer-container .api-text-answer {
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   text-align: center;
   margin-top: 0.5rem;
 }
-body .title {
+
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,11 +187,12 @@ body .title {
   font-family: "Bungee", sans-serif;
   padding-top: 10vh;
 }
-body .collapsible {
+
+.collapsible {
   margin: 60px auto;
   width: 50vw;
 }
-body .collapsible li {
+.collapsible li {
   list-style: none;
   width: 100%;
   margin: 20px;
@@ -194,7 +201,7 @@ body .collapsible li {
   background: #19447D;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-body .collapsible li label {
+.collapsible li label {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -204,7 +211,7 @@ body .collapsible li label {
   color: #FFFFFF;
   cursor: pointer;
 }
-body .collapsible .content {
+.collapsible .content {
   color: #FFFFFF;
   padding: 0 10px;
   line-height: 26px;
@@ -213,138 +220,159 @@ body .collapsible .content {
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
 }
-body .collapsible input[type=radio]:checked + label + .content {
+.collapsible input[type=radio]:checked + label + .content {
   max-height: 400px;
   padding: 10px 10px 20px;
 }
-body .collapsible input[type=radio]:checked + label::before {
+.collapsible input[type=radio]:checked + label::before {
   content: "-";
 }
-body label::before {
+
+label::before {
   margin-right: 10px;
   font-size: 24px;
   font-weight: 600;
 }
-body input[type=radio] {
+
+input[type=radio] {
   display: none;
 }
+
+/* Mobile devices (max-width: 480px) */
 @media only screen and (max-width: 480px) {
-  body .image-background {
+  .image-background {
     display: none;
   }
-  body .image-background h1 {
+  .image-background h1 {
     font-size: 30px;
     top: 350px;
     left: 50px;
   }
-  body .image-background .header-text {
+  .image-background .header-text {
     font-size: 10px;
     top: 350px;
   }
-  body .cont {
+  .cont {
     margin-top: 150px;
     flex-direction: column;
   }
-  body .why-is-container {
+  .why-is-container {
     height: 400px;
     width: 100%;
   }
-  body .why-is-container h2 {
+  .why-is-container h2 {
     font-size: 30px;
   }
-  body .why-is-container .paragraph {
+  .why-is-container .paragraph {
     font-size: 16px;
   }
-  body .statistics-box {
+  main .statistics-box {
     grid-template-columns: 150px;
-    gap: 30px;
-    width: 120vw;
-  }
-  body .statistics-box .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 250px;
-    width: 400px;
-  }
-  body .beach-api .beach {
-    font-size: 18px;
-  }
-  body .beach-api .input-container #input {
-    width: 300px;
-    margin-right: 0;
-  }
-  body .beach-api .input-container #button {
-    width: 80px;
-  }
-  body .answer-container {
-    width: 90%;
-    margin: 2rem auto;
-  }
-  body .title {
-    font-size: 30px;
-  }
-  body .collapsible {
-    width: 100%;
-    padding-right: 20px;
-  }
-  body .collapsible li {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  body .collapsible label {
-    font-size: 16px;
-  }
-  body .collapsible .content {
-    font-size: 14px;
   }
 }
+.beach-api .beach {
+  font-size: 70px;
+}
+.beach-api .input-container #input {
+  width: 800px;
+  margin-right: 0;
+  max-width: 100%;
+}
+.beach-api .input-container #button {
+  width: 150px;
+  border-radius: 0.5rem;
+}
+
+.answer-container {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.collapsible {
+  width: 100%;
+  padding-right: 20px;
+}
+.collapsible li {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.collapsible label {
+  font-size: 16px;
+}
+.collapsible .content {
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .description {
+    width: 70vmin;
+  }
+  .statistics-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Tablets (min-width: 481px and max-width: 768px) */
 @media (max-width: 768px) {
   body .image-background h1 {
     font-size: 3rem;
     top: 480px;
+    max-width: 600px;
   }
   body .image-background .header-text {
     font-size: 1.2rem;
     top: 480px;
+    max-width: 600px;
   }
-  body .description {
+  .description {
     left: 30px;
   }
-  body .description h2 {
+  .description h2 {
     font-size: 35px;
   }
-  body .description .paragraph {
+  .description .paragraph {
     font-size: 18px;
   }
-  body .statistics-box {
+  .statistics-box {
     grid-template-columns: 500px;
     gap: 30px;
   }
-  body .statistics-box .images {
+  .statistics-box .images {
     height: 250px;
     width: 400px;
   }
-  body .beach-api .beach {
+  .beach-api .beach {
     font-size: 20px;
     text-align: center;
   }
-  body .beach-api .input-container {
+  .beach-api .input-container {
     flex-direction: column;
     gap: 20p;
   }
-  body .beach-api #input {
+  .beach-api #input {
     width: 80%;
     margin-right: 0;
   }
-  body .beach-api #button {
+  .beach-api #button {
     width: 80%;
   }
 }
-body .answer-container {
+.answer-container {
   width: 80%;
   margin: 3rem auto;
 }
-body .title {
+
+.title {
   font-size: 2.5rem;
+  padding: 20px;
 }
 
 .collapsible {
