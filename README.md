@@ -7,7 +7,7 @@ Coastal Cleanup is a non-profit organization striving to keep the planet the way
 # Website Link
 - https://coastal-cleanup-2.onrender.com/
 
-# Usage
+# Usage/Installation
 - Use command git clone in your local terminal
 - git clone https://github.com/zt8media/Coastal-Cleanup.git
 - like this ↑
