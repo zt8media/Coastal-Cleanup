@@ -5,7 +5,7 @@
 Coastal Cleanup is a non-profit organization striving to keep the planet the way we found it. Our website highlights the importance of combating water pollution through informative content and community engagement. Users can easily navigate through pages, read and find information, engage in interactive learning, find and host events, and access member services, all within a beautiful beach aesthetic.
 
 # Website Link
-- https://coastal-cleanup-1.onrender.com/
+- https://coastal-cleanup-2.onrender.com/
 
 # Features
 - **Easy Navigation**: Users can easily navigate through different pages.
