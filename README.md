@@ -34,6 +34,7 @@ Coastal Cleanup is a non-profit organization striving to keep the planet the way
 
 - https://openweathermap.org/api
 - https://developers.google.com/maps/documentation/javascript
+- https://fullcalendar.io/
 - https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
 - https://animate.style/
 - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
